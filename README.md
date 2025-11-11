@@ -1,11 +1,9 @@
-# Mario Martínez‑Jiménez — Academic Job Market Site
+# Mario Martínez‑Jiménez — Job Market Site (GF-style)
 
-This repository contains a single-page static site for GitHub Pages.
+One-page static site: left profile column, right content area.
 
-## Quick publish
-1. Create a public repo named `YOUR-USERNAME.github.io` (replace with your GitHub handle).
-2. Upload all files from this folder (keep the `assets/` directory intact).
-3. In **Settings → Pages**, set Source = **Deploy from a branch**, Branch = **main** (root).
+## Publish on GitHub Pages
+1. Create a **public** repo named `YOUR-USERNAME.github.io` (replace with your handle).
+2. Upload all files from this folder (keep the `assets/` directory).
+3. In **Settings → Pages**, set **Deploy from a branch**, Branch = **main** (root).
 4. Visit `https://YOUR-USERNAME.github.io/`.
-
-You can edit `index.html` and the files in `assets/` to update the site.

@@ -1,10 +1,9 @@
 
-# Mario Martínez‑Jiménez — Academic Job Market Site (Multi‑page, v2)
+# Mario Martínez‑Jiménez — Academic Job Market Site (Multi‑page, v3 – polished)
 
-- **index.html** — Welcome page with expanded biography (you are on the 2025–26 job market)
-- **research.html** — Work in Progress + Peer‑Reviewed split (Economics/Health Econ; Health Policy & Public Health; Datasets) with red **[abstract]** / **[link]** tags
-- **teaching.html** — Full teaching list (links are placeholders `#` to replace with real URLs)
-- **cv.html** — Embedded CV + download
+- Larger left photo (4:5), gradient frame, subtle shadows
+- Wider layout (1260px), refined typography (Inter + Lora)
+- Sticky left column, animated buttons, red `[abstract]`/`[link]` tags
+- Pages: index (intro), research (WIP + peer-reviewed groups), teaching, cv (embedded)
 
-## Publish on GitHub Pages
-Create a public repo `YOUR-USERNAME.github.io`, upload all files (keep `assets/`), then enable Pages → Deploy from a branch → `main`.
+Publish: create `YOUR-USERNAME.github.io`, upload files, enable Pages → main branch.

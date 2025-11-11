@@ -5,63 +5,70 @@
 <title>Mario Martínez‑Jiménez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fff;--text:#111827;--muted:#4b5563;--border:#e5e7eb;--link:#0a66c2;
-  --brand:#111827;--accent:#b91c1c; /* red for [abstract]/[link] */
+  --bg:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#59647a;
+  --border:#e6e9ef; --border-strong:#d6dae3;
+  --link:#0a66c2; --brand:#111827; --accent:#b91c1c;
+  --shadow:0 6px 22px rgba(15, 23, 42, 0.06);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial;color:var(--text);background:var(--bg)}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial}
+img{max-width:100%;display:block}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.container{max-width:1180px;margin:0 auto;padding:24px}
-header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);z-index:50}
-.nav{display:flex;align-items:center;gap:24px}
-.brand{font-weight:700;color:var(--brand);font-size:16px;margin-right:auto}
-.nav a{font-weight:600;font-size:14px;color:#111827;padding:10px 8px}
-.nav a:hover{color:var(--link)}
-.layout{display:grid;grid-template-columns:380px 1fr;column-gap:40px}
-.profile{align-self:start;position:sticky;top:88px}
-.card{background:#fff;border:1px solid var(--border);border-radius:12px}
+.container{max-width:1260px;margin:0 auto;padding:28px 28px 0}
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.80);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;gap:28px}
+.brand{text-decoration:none;font-weight:800;letter-spacing:.2px;color:var(--brand);font-size:18px;margin-right:auto}
+.nav a{font-weight:600;font-size:14px;color:#1f2937;padding:14px 10px;border-radius:8px;border:1px solid transparent}
+.nav a:hover{background:#f8fafc;border-color:var(--border)}
+.nav a.active{border-color:var(--border-strong);background:#fff;box-shadow:var(--shadow)}
+.layout{display:grid;grid-template-columns:420px 1fr;gap:44px}
+.profile{align-self:start;position:sticky;top:96px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
 .profile .card{padding:18px}
-.headshot{width:100%;aspect-ratio:4/5;border-radius:10px;border:1px solid var(--border);object-fit:cover}
-.name{font-size:18px;font-weight:700;margin:12px 0 6px}
+.photo-wrap{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 10px 30px rgba(15,23,42,.08)}
+.photo-wrap::before{content:"";position:absolute;inset:0;border-radius:14px;padding:1px;background:linear-gradient(135deg,#f1f5f9,rgba(255,255,255,0));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.headshot{width:100%;aspect-ratio:4/5;object-fit:cover}
+.caption{padding:10px 6px 0}
+.name{font-size:18px;font-weight:800;margin:10px 0 4px}
 .role,.location{color:var(--muted);font-size:14px;margin:0 0 6px}
-.follow{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.follow{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px}
 .follow a{font-size:14px}
-section{padding:28px 0}
-h1{font-size:28px;margin:0 0 10px}
-h2{margin:22px 0 12px;font-size:22px;border-bottom:1px solid var(--border);padding-bottom:6px}
-h3{margin:10px 0;font-size:18px}
-.content .card{padding:20px}
-.subtitle{color:var(--muted);margin:6px 0 16px}
-.list{display:grid;gap:10px;padding-left:18px}
-.list li{margin:0}
-.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#fff;color:#111827;font-weight:600}
-.btn.primary{background:#111827;color:#fff;border-color:#111827}
 .logos{display:flex;gap:12px;align-items:center;margin-top:12px}
-.logos img{height:34px;border-radius:6px;display:block}
-
-.footer{color:var(--muted);font-size:14px;padding:24px 0 40px;border-top:1px solid var(--border)}
-
-details{border:1px dashed var(--border);border-radius:8px;padding:10px 12px;background:#fff}
-details>summary{cursor:pointer;font-weight:600;display:inline}
-summary.abst{color:var(--accent);display:inline;font-weight:600}
-summary.abst::-webkit-details-marker{display:none}
-.tag-red{color:var(--accent);font-size:12px;font-weight:700;margin-left:8px}
-.small{font-size:12px}
-@media(max-width:1000px){.layout{grid-template-columns:1fr}.profile{position:static}}
+.logos img{height:34px;border-radius:6px}
+section{padding:26px 0}
+h1{font-family:"Lora",serif;font-weight:700;font-size:32px;margin:0 0 12px;letter-spacing:.2px}
+h2{font-family:"Lora",serif;margin:22px 0 12px;font-size:24px;border-bottom:1px solid var(--border);padding-bottom:8px}
+h3{margin:12px 0;font-size:18px}
+.content p{max-width:72ch;line-height:1.6}
+.content .card{padding:22px 22px}
+.subtitle{color:var(--muted);margin:6px 0 18px}
+.list{display:grid;gap:12px;padding-left:18px}
+.list li{margin:0}
+.item{padding:16px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#fff;color:#111827;font-weight:700;box-shadow:var(--shadow);transition:.18s transform ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:#111827;color:#fff;border-color:#111827}
+.tag-red{color:var(--accent);font-size:12px;font-weight:800;margin-left:8px}
+details{border:1px dashed var(--border-strong);border-radius:10px;padding:10px 12px;background:#fff}
+details>summary{cursor:pointer;font-weight:800;display:inline;color:var(--accent)}
+summary::-webkit-details-marker{display:none}
+.footer{color:var(--muted);font-size:14px;padding:28px 0 44px;border-top:1px solid var(--border)}
+@media(max-width:1100px){.layout{grid-template-columns:1fr;gap:24px}.profile{position:static}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <div class="brand">Mario Martínez‑Jiménez</div>
-    <nav class="nav-links">
+    <a class="brand" href="index.html" aria-label="Go to Home">Mario Martínez‑Jiménez</a>
+    <nav class="nav-links" role="navigation" aria-label="Primary">
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">CV</a>
@@ -72,30 +79,32 @@ summary.abst::-webkit-details-marker{display:none}
 <main class="container">
   <div class="layout">
     
-<aside class="profile">
+<aside class="profile" aria-label="Profile and affiliations">
   <div class="card">
-    <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez">
-    <div class="name">Mario Martínez‑Jiménez</div>
-    <div class="role">Imperial College Research Fellow</div>
-    <div class="role">Visiting Postdoctoral Scholar, Stanford (2025–2026)</div>
-    <div class="location">London, UK · Stanford, CA</div>
-    <div class="follow">
-      <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="assets/Martinez_Jimenez_Mario_vita.pdf">CV (PDF)</a>
-    </div>
-    <div class="logos">
-      <a href="https://healthpolicy.fsi.stanford.edu/" target="_blank" rel="noopener"><img src="assets/stanford_medicine.png" alt="Stanford Medicine logo"></a>
-      <a href="https://www.imperial.ac.uk/business-school/" target="_blank" rel="noopener"><img src="assets/Newlogo.png" alt="Imperial College Business School logo"></a>
+    <div class="photo-wrap"><img class="headshot" src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez"></div>
+    <div class="caption">
+      <div class="name">Mario Martínez‑Jiménez</div>
+      <div class="role">Imperial College Research Fellow</div>
+      <div class="role">Visiting Postdoctoral Scholar, Stanford (2025–2026)</div>
+      <div class="location">London, UK · Stanford, CA</div>
+      <div class="follow" role="navigation" aria-label="External profiles">
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="assets/Martinez_Jimenez_Mario_vita.pdf">CV (PDF)</a>
+      </div>
+      <div class="logos" aria-label="Affiliations">
+        <a href="https://healthpolicy.fsi.stanford.edu/" target="_blank" rel="noopener"><img src="assets/stanford_medicine.png" alt="Stanford Medicine logo"></a>
+        <a href="https://www.imperial.ac.uk/business-school/" target="_blank" rel="noopener"><img src="assets/Newlogo.png" alt="Imperial College Business School logo"></a>
+      </div>
     </div>
   </div>
 </aside>
 
     <div class="content">
       <section id="home">
-        <h1>Welcome</h1>
-        <p class="subtitle small">On the 2025–2026 job market</p>
+        <h1>Mario Martínez‑Jiménez</h1>
+        <p class="subtitle"><strong>On the 2025–2026 job market</strong></p>
         <p>I am currently a Visiting Postdoctoral Scholar at Stanford Universtiy (Department of Health Policy, Stanford School of Medicine), hosted by Dr. Maya Rossin-Slater (2025–2026). I am an Imperial College Research Fellow in the Department of Economics &amp; Public Policy at Imperial Business School, sponsored by Professor Dame Carol Propper.</p><p>My research focuses on the intersection of health, labor, and public economics, particularly issues related to child development and human capital formation, healthcare inequality, and family. My projects examine (i) the long-term effects of early-life shocks, (ii) environmental risks affecting young people&#x27;s mental health and well-being, (iii) socioeconomic inequality in health and access to healthcare, and (iv) factors underlying declining fertility rates.</p><p>Before joining Imperial, I gained my PhD in Health Policy (Economics) from Lancaster University, funded by the NIHR School for Public Health Research. I have a Bachelor of Science in Economics from Pompeu Fabra University (UPF), a Master of Science in Health Economics from Erasmus University Rotterdam (EUR), and a Master of Research in Applied Economics from the University Autonomous of Barcelona (UAB).</p><p>My research is interdisciplinary and I have published in academic journals in various fields, such as the Economics and Human Biology, Social Science &amp; Medicine, BMJ, Public Health, BJGP, Health Economics, Policy and Law, etc. My work has featured in popular media and relevant blogs, such as The Guardian, The Times, Diari Ara, Nada Es Gratis, etc.</p><p>I am affiliated with Centre for Health Economics and Policy Innovation (CHEPI) and with the Health Econometrics and Data Group (HEDG—University of York). I am a member of the Royal Economic Society, the European Labor Economics Society, and the International, European, and Spanish Health Economics Associations.</p><p>I have taught at both undergraduate and postgraduate levels at Imperial College London and Lancaster University. I also served as Module Leader of the Economic module for the MSc Management program at Imperial Business School during the 2024–2025 academic year.</p>
         <div class="btnrow" style="margin-top:18px">
           <a class="btn primary" href="research.html">Research</a>
@@ -107,5 +116,9 @@ summary.abst::-webkit-details-marker{display:none}
   </div>
 </main>
 <section><div class="container footer">© <span id="y"></span> Mario Martínez‑Jiménez · Built for GitHub Pages</div></section>
-<script>document.getElementById('y').textContent=(new Date).getFullYear();</script>
+<script>
+const path = (location.pathname.split('/').pop() || 'index.html');
+document.querySelectorAll('.nav a').forEach(function(a){ if(a.getAttribute('href')===path) a.classList.add('active'); });
+document.getElementById('y').textContent=(new Date).getFullYear();
+</script>
 </body></html>

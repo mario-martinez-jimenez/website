@@ -1,13 +1,10 @@
-# Mario Martínez‑Jiménez — Academic Job Market Site (Multi‑page)
 
-Pages:
-- `index.html` — Welcome / Introduction
-- `research.html` — Work in Progress + Peer‑Reviewed (Economics & Health Econ; Health Policy & Public Health; Datasets)
-- `teaching.html` — Full teaching record
-- `cv.html` — Embedded CV and download
+# Mario Martínez‑Jiménez — Academic Job Market Site (Multi‑page, v2)
+
+- **index.html** — Welcome page with expanded biography (you are on the 2025–26 job market)
+- **research.html** — Work in Progress + Peer‑Reviewed split (Economics/Health Econ; Health Policy & Public Health; Datasets) with red **[abstract]** / **[link]** tags
+- **teaching.html** — Full teaching list (links are placeholders `#` to replace with real URLs)
+- **cv.html** — Embedded CV + download
 
 ## Publish on GitHub Pages
-1. Create a **public** repo named `YOUR-USERNAME.github.io`.
-2. Upload all files and the `assets/` directory.
-3. In **Settings → Pages**, choose **Deploy from a branch**, Branch = **main** (root).
-4. Open `https://YOUR-USERNAME.github.io/`.
+Create a public repo `YOUR-USERNAME.github.io`, upload all files (keep `assets/`), then enable Pages → Deploy from a branch → `main`.

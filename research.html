@@ -8,32 +8,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#fff;--text:#111827;--muted:#4b5563;--border:#e5e7eb;--link:#0a66c2}
-*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial;color:var(--text);background:var(--bg)}
+:root{
+  --bg:#fff;--text:#111827;--muted:#4b5563;--border:#e5e7eb;--link:#0a66c2;
+  --brand:#111827;--accent:#b91c1c; /* red for [abstract]/[link] */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial;color:var(--text);background:var(--bg)}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.container{max-width:1000px;margin:0 auto;padding:24px}
+.container{max-width:1180px;margin:0 auto;padding:24px}
 header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);z-index:50}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav a{font-weight:600;font-size:14px;color:#111827}.nav a:hover{color:var(--link)}
-.layout{display:grid;grid-template-columns:280px 1fr;column-gap:36px}
-.profile{position:sticky;top:84px;align-self:start}
+.nav{display:flex;align-items:center;gap:24px}
+.brand{font-weight:700;color:var(--brand);font-size:16px;margin-right:auto}
+.nav a{font-weight:600;font-size:14px;color:#111827;padding:10px 8px}
+.nav a:hover{color:var(--link)}
+.layout{display:grid;grid-template-columns:380px 1fr;column-gap:40px}
+.profile{align-self:start;position:sticky;top:88px}
 .card{background:#fff;border:1px solid var(--border);border-radius:12px}
 .profile .card{padding:18px}
-.headshot{width:100%;aspect-ratio:1/1;border-radius:8px;border:1px solid var(--border);object-fit:cover}
-.name{font-size:22px;font-weight:700;margin:12px 0 6px}.role,.location{color:var(--muted);font-size:14px;margin:0 0 6px}
-.follow{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}.follow a{font-size:14px}
-section{padding:32px 0}h1{font-size:28px;margin:0 0 10px}h2{margin:0 0 12px;font-size:24px;border-bottom:1px solid var(--border);padding-bottom:6px}h3{margin:10px 0;font-size:18px}
-.content .card{padding:20px}.subtitle{color:var(--muted);margin:6px 0 16px}
-.list{display:grid;gap:8px;padding-left:18px}.list li{margin:0}
+.headshot{width:100%;aspect-ratio:4/5;border-radius:10px;border:1px solid var(--border);object-fit:cover}
+.name{font-size:18px;font-weight:700;margin:12px 0 6px}
+.role,.location{color:var(--muted);font-size:14px;margin:0 0 6px}
+.follow{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.follow a{font-size:14px}
+section{padding:28px 0}
+h1{font-size:28px;margin:0 0 10px}
+h2{margin:22px 0 12px;font-size:22px;border-bottom:1px solid var(--border);padding-bottom:6px}
+h3{margin:10px 0;font-size:18px}
+.content .card{padding:20px}
+.subtitle{color:var(--muted);margin:6px 0 16px}
+.list{display:grid;gap:10px;padding-left:18px}
+.list li{margin:0}
 .btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#fff;color:#111827;font-weight:600}
 .btn.primary{background:#111827;color:#fff;border-color:#111827}
-.logos{display:flex;gap:14px;align-items:center;margin-top:12px}.logos img{height:36px;border-radius:6px;display:block}
+.logos{display:flex;gap:12px;align-items:center;margin-top:12px}
+.logos img{height:34px;border-radius:6px;display:block}
+
 .footer{color:var(--muted);font-size:14px;padding:24px 0 40px;border-top:1px solid var(--border)}
+
 details{border:1px dashed var(--border);border-radius:8px;padding:10px 12px;background:#fff}
-details>summary{cursor:pointer;font-weight:600}
-@media(max-width:900px){.layout{grid-template-columns:1fr}.profile{position:static}}
-.badge{display:inline-block;font-size:12px;padding:4px 8px;border:1px solid var(--border);border-radius:999px;background:#f9fafb;margin-left:8px}
+details>summary{cursor:pointer;font-weight:600;display:inline}
+summary.abst{color:var(--accent);display:inline;font-weight:600}
+summary.abst::-webkit-details-marker{display:none}
+.tag-red{color:var(--accent);font-size:12px;font-weight:700;margin-left:8px}
+.small{font-size:12px}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.profile{position:static}}
 </style>
 
 </head>
@@ -43,7 +62,6 @@ details>summary{cursor:pointer;font-weight:600}
   <div class="container nav">
     <div class="brand">Mario Martínez‑Jiménez</div>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">CV</a>
@@ -80,90 +98,118 @@ details>summary{cursor:pointer;font-weight:600}
 
         <h2>Work in Progress</h2>
         <ul class="list">
-          <li class="card" style="padding:14px">
-            <strong>Early‑life conditions and children’s adaptive behaviour in the UKHLS</strong> <span class="badge">with E. Aguirre</span>
-            <div class="btnrow"><a class="btn" href="#" target="_blank" rel="noopener">Link (draft)</a></div>
-            <details><summary>Read abstract</summary><p>Examines how perinatal and early‑childhood conditions shape communication, physical, and socio‑emotional adaptive behaviour by age three, using UKHLS with causal‑inference strategies.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Temporary contracts and fertility in Spain’s 1984 reform</strong> <span class="badge">with J. Vall Castello</span>
-            <div class="btnrow"><a class="btn" href="#" target="_blank" rel="noopener">Link (draft)</a></div>
-            <details><summary>Read abstract</summary><p>Evaluates how exposure to temporary employment at labour‑market entry affects completed fertility and timing of births, combining birth registries with survey data.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>NICU admission and later educational outcomes in Ireland</strong> <span class="badge">with O. Doyle</span>
-            <div class="btnrow"><a class="btn" href="#" target="_blank" rel="noopener">Link (draft)</a></div>
-            <details><summary>Read abstract</summary><p>Longitudinal evidence on educational challenges among children admitted to NICU, leveraging Growing Up in Ireland cohorts and rich covariates.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Medicaid vaccination mandates and paediatric uptake in the US</strong> <span class="badge">with M. Rossin‑Slater, P. Persson</span>
-            <div class="btnrow"><a class="btn" href="#" target="_blank" rel="noopener">Link (draft)</a></div>
-            <details><summary>Read abstract</summary><p>Uses MAX/TAF claims and policy variation to estimate causal effects of school‑entry mandates and exemptions on vaccine uptake.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Economic shocks, retirement, and mental health</strong> <span class="badge">with B. Hollingsworth, E. Zucchelli</span>
-            <div class="btnrow"><a class="btn" href="#" target="_blank" rel="noopener">Link (draft)</a></div>
-            <details><summary>Read abstract</summary><p>Instrumental‑variables panel analysis on how retirement interacts with macro shocks to influence mental health (ELSA data).</p></details>
-          </li>
+          
+    <li class="card" style="padding:14px">
+      <strong>Early‑life conditions and children’s adaptive behaviour in the UKHLS (with E. Aguirre)</strong> — <em>Working paper</em>, draft.
+      <a class="tag-red" href="#" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Examines how perinatal and early‑childhood conditions shape communication, physical, and socio‑emotional adaptive behaviour by age three, using UKHLS with causal‑inference strategies.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Temporary contracts and fertility in Spain’s 1984 reform (with J. Vall Castello)</strong> — <em>Working paper</em>, draft.
+      <a class="tag-red" href="#" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Evaluates how exposure to temporary employment at labour‑market entry affects completed fertility and timing of births, combining birth registries with survey data.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>NICU admission and later educational outcomes in Ireland (with O. Doyle)</strong> — <em>Working paper</em>, draft.
+      <a class="tag-red" href="#" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Longitudinal evidence on educational challenges among children admitted to NICU, leveraging Growing Up in Ireland cohorts.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Medicaid vaccination mandates and paediatric uptake in the US (with M. Rossin‑Slater, P. Persson)</strong> — <em>Working paper</em>, draft.
+      <a class="tag-red" href="#" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Uses MAX/TAF claims and policy variation to estimate causal effects of school‑entry mandates and exemptions on vaccine uptake.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Economic shocks, retirement, and mental health (with B. Hollingsworth, E. Zucchelli)</strong> — <em>Working paper</em>, draft.
+      <a class="tag-red" href="#" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>IV panel analysis on how retirement interacts with macro shocks to influence mental health (ELSA data).</p></details>
+    </li>
+    
         </ul>
 
         <h2>Peer‑Reviewed Journals</h2>
 
         <h3>Economics &amp; Health Economics Journals</h3>
         <ul class="list">
-          <li class="card" style="padding:14px">
-            <strong>Socioeconomic Deprivation, Health and Healthcare Utilisation among Millennials</strong> — <em>Social Science &amp; Medicine</em>, 2024.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Documents socioeconomic gradients in health and health‑care use for young adults using nationally representative data.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Parental nonemployment in childhood and children's health later in life</strong> — <em>Economics &amp; Human Biology</em>, 2023.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Estimates long‑run health effects of parental nonemployment experienced in childhood.</p></details>
-          </li>
+          
+    <li class="card" style="padding:14px">
+      <strong>Socioeconomic Deprivation, Health and Healthcare Utilisation among Millennials</strong> — <em>Social Science &amp; Medicine</em>, 2024.
+      <a class="tag-red" href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Documents socioeconomic gradients in health and health‑care use for young adults using nationally representative data.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Parental nonemployment in childhood and children's health later in life</strong> — <em>Economics &amp; Human Biology</em>, 2023.
+      <a class="tag-red" href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Estimates long‑run health effects of parental nonemployment experienced in childhood.</p></details>
+    </li>
+    
         </ul>
 
         <h3>Health Policy &amp; Public Health Journals</h3>
         <ul class="list">
-          <li class="card" style="padding:14px">
-            <strong>Perceptions and practices of UK general practitioners towards youth vaping</strong> — <em>BJGP Open</em>, 2025.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Reports GPs’ perceptions and clinical practices regarding youth vaping in the UK.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the UK</strong> — <em>BMJ Public Health</em>, 2025.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Survey evidence on public acceptability of food taxes designed to improve diet.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Austerity and Waiting Times: Evidence on reproductive health care delays among young millennials</strong> — <em>Public Health</em>, 2025.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Explores how fiscal austerity translated into delays in reproductive health care access.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Impact of new guidance on survival for 22‑week births in England and Wales</strong> — <em>BMJ Medicine</em>, 2023.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Evaluates changes in outcomes for extremely preterm births around guidance changes.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Coping with COVID‑19: hospital care structures and capacity</strong> — <em>Health Economics, Policy and Law</em>, 2023.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Comparative analysis of hospital capacity and organisation during COVID‑19.</p></details>
-          </li>
-          <li class="card" style="padding:14px">
-            <strong>Cost sharing &amp; the use of prescription and OTC medicines in Catalonia</strong> — <em>IJERPH</em>, 2021.
-            <div class="btnrow"><a class="btn" href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Estimates cost‑sharing effects on medicine utilisation using administrative claims.</p></details>
-          </li>
+          
+    <li class="card" style="padding:14px">
+      <strong>Perceptions and practices of UK general practitioners towards youth vaping</strong> — <em>BJGP Open</em>, 2025.
+      <a class="tag-red" href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Reports GPs’ perceptions and clinical practices regarding youth vaping in the UK.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the UK</strong> — <em>BMJ Public Health</em>, 2025.
+      <a class="tag-red" href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Survey evidence on public acceptability of food taxes designed to improve diet.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Austerity and Waiting Times: Evidence on reproductive health care delays among young millennials</strong> — <em>Public Health</em>, 2025.
+      <a class="tag-red" href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Explores how fiscal austerity translated into delays in reproductive health care access.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Impact of new guidance on survival for 22‑week births in England and Wales</strong> — <em>BMJ Medicine</em>, 2023.
+      <a class="tag-red" href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Evaluates changes in outcomes for extremely preterm births around guidance changes.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Coping with COVID‑19: hospital care structures and capacity</strong> — <em>Health Economics, Policy and Law</em>, 2023.
+      <a class="tag-red" href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Comparative analysis of hospital capacity and organisation during COVID‑19.</p></details>
+    </li>
+    
+          
+    <li class="card" style="padding:14px">
+      <strong>Cost sharing &amp; the use of prescription and OTC medicines in Catalonia</strong> — <em>IJERPH</em>, 2021.
+      <a class="tag-red" href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Estimates cost‑sharing effects on medicine utilisation using administrative claims.</p></details>
+    </li>
+    
         </ul>
 
         <h3>Datasets</h3>
         <ul class="list">
-          <li class="card" style="padding:14px">
-            <strong>UKFood Combined Dataset: Statistical Matching of LCFS with NDNS (2018–2019)</strong> — <em>UK Data Service</em>, 2025.
-            <div class="btnrow"><a class="btn" href="http://doi.org/10.5255/UKDA-SN-9369-1" target="_blank" rel="noopener">Link (DOI)</a></div>
-            <details><summary>Read abstract</summary><p>Describes construction of a combined consumption‑nutrition dataset via statistical matching.</p></details>
-          </li>
+          
+    <li class="card" style="padding:14px">
+      <strong>UKFood Combined Dataset: Statistical Matching of LCFS with NDNS (2018–2019)</strong> — <em>UK Data Service</em>, 2025.
+      <a class="tag-red" href="http://doi.org/10.5255/UKDA-SN-9369-1" target="_blank" rel="noopener">[link]</a>
+      <details><summary class="abst">[abstract]</summary><p>Describes construction of a combined consumption‑nutrition dataset via statistical matching.</p></details>
+    </li>
+    
         </ul>
       </section>
     </div>

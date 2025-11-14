@@ -30,71 +30,51 @@
   </script>
   <style>
     :root {
-      --bg: #ffffff;
-      --card: #ffffff;
-      --muted: #4b5563;
-      --text: #111827;
-      --accent: #0ea5e9;
-      --link: #0a66c2;
-      --border: #e5e7eb;
+      --bg: #0b0e14;
+      --card: #111520;
+      --muted: #9aa4b2;
+      --text: #e7ecf3;
+      --accent: #7bd88f; /* soft green */
+      --link: #7ab8ff;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color: var(--text); background: var(--bg); }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: linear-gradient(120deg, #0b0e14, #0f1423 50%, #0b0e14); }
     a { color: var(--link); text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
-    header { position: sticky; top: 0; background: rgba(255,255,255,0.95); border-bottom: 1px solid var(--border); z-index: 50; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(11,14,20,0.65); border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 50; }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .brand { font-weight: 700; letter-spacing: 0.2px; }
-    .nav a { font-weight: 600; font-size: 14px; color: #111827; }
-    .nav a:hover { color: var(--link); }
+    .pill { display: inline-flex; gap: 10px; align-items: center; padding: 8px 12px; background: #0c1325; border: 1px solid rgba(255,255,255,0.06); border-radius: 999px; color: var(--muted); font-size: 14px; }
+    .nav a { font-weight: 600; font-size: 14px; }
     .nav-links { display: flex; gap: 18px; align-items: center; }
-
-    .layout { display: grid; grid-template-columns: 280px 1fr; column-gap: 36px; }
-    .profile { position: sticky; top: 84px; align-self: start; }
-    .profile .card { padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); }
-    .profile .headshot { width: 100%; aspect-ratio: 1/1; border-radius: 8px; border: 1px solid var(--border); object-fit: cover; }
-    .name { font-size: 22px; font-weight: 700; margin: 12px 0 6px; }
-    .role { color: var(--muted); font-size: 14px; margin: 0 0 6px; }
-    .location { color: var(--muted); font-size: 14px; }
-    .fields { color: var(--muted); font-size: 14px; margin: 2px 0 8px; }
-    .socials { margin-top: 10px; display: flex; gap: 10px; }
-    .iconbtn { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: #111827; }
-    .iconbtn:hover { background: #f3f4f6; text-decoration: none; }
-    .iconbtn svg { width: 20px; height: 20px; fill: currentColor; }
-    .iconbtn img { width: 20px; height: 20px; display: block; }
-
-    .papers { display: grid; gap: 24px; margin-top: 12px; }
-    .paper { padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
-    .paper-title { font-size: 20px; margin: 0 0 6px; line-height: 1.25; }
-    .paper-meta { color: var(--muted); font-size: 14px; }
-    .tag { display: inline-block; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; font-size: 12px; margin-left: 6px; color: #111827; background: #f9fafb; }
-    .action-row { margin-top: 12px; display: flex; gap: 10px; }
-    .btn-square { display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border: 1px solid #111827; border-radius: 8px; color: #111827; background: #fff; font-weight: 600; letter-spacing: 0.3px; }
-    .btn-square:hover { background: #111827; color: #fff; text-decoration: none; }
-
-    section { padding: 32px 0; }
-    h1 { font-size: 28px; margin: 0 0 10px; }
-    h2 { margin: 0 0 12px; font-size: 24px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-    h3 { margin: 10px 0; font-size: 18px; }
-
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
-    .content .card { padding: 20px; }
+    .hero { padding: 48px 0 12px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: center; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .hero .card { padding: 28px; }
+    .hero h1 { margin: 0 0 10px; font-size: 40px; line-height: 1.08; letter-spacing: -0.5px; }
     .subtitle { color: var(--muted); font-weight: 500; margin: 6px 0 16px; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .chip { padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; color: #1f2937; font-size: 12px; background: #f9fafb; }
-    .btnrow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); background: #ffffff; color: #111827; font-weight: 600; }
-    .btn.primary { background: #111827; color: #ffffff; border-color: #111827; }
-    .pub { padding: 10px 12px; border-radius: 10px; border: 1px dashed var(--border); background: #ffffff; }
-
-    .footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; border-top: 1px solid var(--border); }
-    .logos { display:flex; gap:14px; justify-content:flex-start; align-items:center; margin-top:12px; }
-    .logos img { height:36px; display:block; border-radius:6px; }
-
+    .chip { padding: 6px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; color: var(--muted); font-size: 12px; background: #0d1220; }
+    .btnrow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); background: #0e1528; color: var(--text); font-weight: 600; }
+    .btn.primary { background: linear-gradient(180deg, #86ffa3, #65e48a); color: #0c1018; border-color: transparent; }
+    .btn.primary:hover { filter: brightness(0.97); }
+    .btn:hover { transform: translateY(-1px); transition: transform 120ms ease; }
+    .headshot { aspect-ratio: 1 / 1; width: 100%; border-radius: 16px; object-fit: cover; display: block; border: 1px solid rgba(255,255,255,0.08); }
+    section { padding: 36px 0; }
+    h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: 0.2px; }
+    .grid { display: grid; gap: 16px; }
+    .two { grid-template-columns: 1fr 1fr; }
+    .three { grid-template-columns: repeat(3, 1fr); }
+    .list { display: grid; gap: 8px; padding-left: 18px; }
+    .list li { margin: 0; padding-left: 6px; }
+    .pub { padding: 14px; border-radius: 14px; border: 1px dashed rgba(255,255,255,0.09); background: #0d1220; }
+    .footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
+    .logos { display:flex; gap:16px; justify-content:center; align-items:center; margin-top:14px; }
+    .logos img { height:40px; display:block; border-radius:8px; }
     @media (max-width: 900px) {
-      .layout { grid-template-columns: 1fr; }
-      .profile { position: static; }
+      .hero { grid-template-columns: 1fr; }
+      .two, .three { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -112,192 +92,148 @@
     </div>
   </header>
 
-  <main class="container">
-    <div class="layout">
-      <aside class="profile">
-        <div class="card">
-          <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez" />
-          <div class="name">Mario Martínez‑Jiménez</div>
-          <div class="role">Imperial College Research Fellow</div>
-          <div class="role">Visiting Postdoctoral Scholar, Stanford (2025–2026)</div>
-          <div class="location">London, UK · Stanford, CA</div>
-          <div class="fields">Health • Labor • Public Economics</div>
-          <div class="socials">
-            <a class="iconbtn" href="mailto:m.martinez-jimenez@imperial.ac.uk" aria-label="Email" title="Email">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
-            </a>
-            <a class="iconbtn" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
-              <svg viewBox="0 0 24 24"><path d="M12 3 2 12h5v7l5-3 5 3v-7h5L12 3Z"/></svg>
-            </a>
-            <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7c0-1.7 0-3.8-2.3-3.8s-2.7 1.8-2.7 3.7V24h-4V8Z"/></svg>
-            </a>
-            <a class="iconbtn" href="https://twitter.com/m_marjim" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
-              <svg viewBox="0 0 24 24"><path d="M20.3 3H16.9L12 9.9 7 3H3l7.4 10.2L3.4 21H7l5.2-7.2L17 21h4l-7.9-10.8L20.3 3z"/></svg>
-            </a>
-            <a class="iconbtn" href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener" aria-label="Stanford profile" title="Stanford profile">
-              <img src="assets/stanford_medicine.png" alt="Stanford Medicine logo" />
-            </a>
-            <a class="iconbtn" href="https://www.imperial.ac.uk/business-school/people/mario-martinez-jimenez/" target="_blank" rel="noopener" aria-label="Imperial profile" title="Imperial profile">
-              <img src="assets/Newlogo.png" alt="Imperial College Business School logo" />
-            </a>
-          </div>
-          <div class="logos">
-            <a href="https://healthpolicy.fsi.stanford.edu/" target="_blank" rel="noopener" aria-label="Stanford Medicine – Department of Health Policy"><img src="assets/stanford_medicine.png" alt="Stanford Medicine logo" /></a>
-            <a href="https://www.imperial.ac.uk/business-school/" target="_blank" rel="noopener" aria-label="Imperial College Business School"><img src="assets/Newlogo.png" alt="Imperial College Business School logo" /></a>
-          </div>
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="pill">Applied Microeconomist • Health, Labor & Public Economics</div>
+        <h1>Hi — I’m Mario Martínez‑Jiménez.</h1>
+        <p class="subtitle">Imperial College Research Fellow (Dept. of Economics & Public Policy, Imperial Business School) and Visiting Postdoctoral Scholar (Department of Health Policy, Stanford School of Medicine, 2025–2026).</p>
+        <p>My research sits at the intersection of health, labor, and public economics, with an emphasis on child development, human capital formation, healthcare inequality, and family outcomes. Current projects study (i) long‑term effects of early‑life shocks, (ii) environmental risks shaping young people’s mental health and well‑being, (iii) socioeconomic inequality in health and access to care, and (iv) factors behind declining fertility.</p>
+        <div class="chips">
+          <span class="chip">Child development</span>
+          <span class="chip">Human capital</span>
+          <span class="chip">Inequality</span>
+          <span class="chip">Health policy</span>
+          <span class="chip">Causal inference</span>
         </div>
-      </aside>
-
-      <div class="content">
-        <section id="home">
-          <h1>Welcome</h1>
-          <p class="subtitle">Health • Labor • Public Economics</p>
-          <p>I am an applied microeconomist working at the intersection of health, labor, and public economics. I study child development, human capital formation, and the effects of public policy using causal inference with administrative and survey data.</p>
-          <div class="btnrow">
-            <a class="btn primary" href="assets/Martinez_Jimenez_Mario_vita.pdf">Download CV</a>
-            <a class="btn" href="#research">See publications</a>
-          </div>
-        </section>
-
-        <section id="research">
-          <h1>Research</h1>
-          <h3>Selected Publications</h3>
-          <div class="papers">
-            <div class="paper">
-              <div class="paper-title">Perceptions and practices of UK general practitioners towards youth vaping</div>
-              <div class="paper-meta">Najafi, E.; Wasan, D.; Baker, Y.; Peters, K.; Vasooja, D.; Warnapala, M.; <strong>Martínez‑Jiménez, M.</strong> · 2025 · <em>BJGP Open</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the UK</div>
-              <div class="paper-meta">Sassi, F.; Brinsden, H.; <strong>Martínez‑Jiménez, M.</strong> · 2025 · <em>BMJ Public Health</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Austerity and Waiting Times: Evidence on reproductive health care delays among young millennials</div>
-              <div class="paper-meta">Hollingsworth, B.; Zucchelli, E.; <strong>Martínez‑Jiménez, M.</strong> · 2025 · <em>Public Health</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Socioeconomic Deprivation, Health and Healthcare Utilisation among Millennials</div>
-              <div class="paper-meta">Hollingsworth, B.; Zucchelli, E.; <strong>Martínez‑Jiménez, M.</strong> · 2024 · <em>Social Science &amp; Medicine</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Parental nonemployment in childhood and children's health later in life</div>
-              <div class="paper-meta"><strong>Martínez‑Jiménez, M.</strong> · 2023 · <em>Economics &amp; Human Biology</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Impact of new guidance on survival for 22‑week births in England and Wales</div>
-              <div class="paper-meta">Smith, L.K.; van Blankenstein, E.; Fox, G.; Seaton, S.E.; Petrou, S.; Battersby, C.; <strong>Martínez‑Jiménez, M.</strong> · 2023 · <em>BMJ Medicine</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Coping with COVID‑19: hospital care structures and capacity</div>
-              <div class="paper-meta">Czypionka, T.; Reiss, M.; Hagen, T.; Löblová, O.; Murauskienė, L.; Or, Z.; Vrangbæk, K.; <strong>Martínez‑Jiménez, M.</strong> · 2023 · <em>Health Economics, Policy and Law</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-            <div class="paper">
-              <div class="paper-title">Cost sharing &amp; the use of prescription and OTC medicines in Catalonia</div>
-              <div class="paper-meta">Martínez‑Jiménez, M.; García‑Gómez, P.; Puig‑Junoy, J. · 2021 · <em>IJERPH</em><span class="tag">Published</span></div>
-              <div class="action-row">
-                <a class="btn-square" href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener">ABS</a>
-                <a class="btn-square" href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </div>
-          </div>
-          <p class="subtitle" style="margin-top:16px">More on <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.imperial.ac.uk/business-school/research/people/mario-martinez-jimenez/" target="_blank" rel="noopener">Imperial profile</a>.</p>
-        </section>
-
-        <section id="vitae">
-          <h2>Vitae</h2>
-          <div class="card">
-            <p>Full CV available as a PDF:</p>
-            <p><a class="btn" href="assets/Martinez_Jimenez_Mario_vita.pdf">Download CV (PDF)</a></p>
-            <p class="subtitle">Fields</p>
-            <div class="chips">
-              <span class="chip">Primary: Health</span>
-              <span class="chip">Primary: Labor</span>
-              <span class="chip">Secondary: Child Development</span>
-              <span class="chip">Secondary: Inequality</span>
-              <span class="chip">Secondary: Causal Inference</span>
-            </div>
-          </div>
-        </section>
-
-        <section id="teaching">
-          <h1>Teaching</h1>
-          <div class="card" style="padding:20px">
-            <h2 style="margin-top:0">Imperial College London — Business School</h2>
-            <p class="subtitle"><em>London, UK — 2022–Present</em></p>
-            <ul class="list">
-              <li><strong>Economics (MSc Management)</strong> — Module Leader, <em>Fall 2024</em></li>
-              <li><strong>Financing Healthcare (MSc Health Policy)</strong> — Guest Lecturer, <em>Spring 2025</em></li>
-              <li><strong>Research Methods & Practice (IBSc Medicine & Joint Honours)</strong> — Thesis advisor, <em>2024–2025</em></li>
-              <li><strong>Economics of Health Care (MSc ESB)</strong> — Tutorial Leader, <em>Summer 2022–2025</em></li>
-              <li><strong>Statistics & Econometrics (MSc Business Analytics)</strong> — Guest Lecturer, <em>Fall 2023; Summer 2024–2025</em></li>
-              <li><strong>Individual Research Project (MSc ESB)</strong> — Supervisor, <em>Summer 2025</em></li>
-              <li><strong>Summer Research Internship (BSc Economics, Finance & Data Analysis)</strong> — Supervisor, <em>Summer 2025</em></li>
-            </ul>
-            <h2>Lancaster University — Management School</h2>
-            <p class="subtitle"><em>Lancaster, UK — 2019–2021</em></p>
-            <ul class="list">
-              <li><strong>Health Economics (BSc Economics)</strong> — Tutorial Leader, <em>Fall 2019, 2020, 2021</em></li>
-            </ul>
-            <h2>Teaching Qualifications</h2>
-            <ul class="list">
-              <li>Associate Fellow of the Higher Education Academy (AFHEA), Advance HE (2022)</li>
-              <li>Introduction to Teaching at Lancaster (2020)</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="contact">
-          <h2>Contact</h2>
-          <div class="card" style="padding-bottom:4px">
-            <h3>Imperial College London</h3>
-            <p>Imperial College Research Fellow<br>Department of Economics & Public Policy (EPP)<br>Imperial Business School<br>Office 493, City and Guilds Building<br>South Kensington Campus<br>London SW7 2AZ, United Kingdom</p>
-            <p>E: <a href="mailto:m.martinez-jimenez@imperial.ac.uk">m.martinez-jimenez@imperial.ac.uk</a><br>
-               Web: <a href="https://www.imperial.ac.uk/business-school/people/mario-martinez-jimenez/" target="_blank" rel="noopener">Imperial profile</a></p>
-            <h3>Stanford University</h3>
-            <p>Visiting Postdoctoral Scholar<br>Department of Health Policy, School of Medicine<br>615 Crothers Way, Encina Commons, MC6019<br>Stanford, CA 94305-6006</p>
-            <p>E: <a href="mailto:mmarjim3@stanford.edu">mmarjim3@stanford.edu</a><br>
-               Web: <a href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener">Stanford profile</a></p>
-          </div>
-        </section>
-
-        <section>
-          <div class="footer">© <span id="y"></span> Mario Martínez‑Jiménez · Built for GitHub Pages</div>
-        </section>
+        <div class="btnrow">
+          <a class="btn primary" href="assets/Martinez_Jimenez_Mario_vita.pdf">Download CV</a>
+          <a class="btn" href="#research">See publications</a>
+          <a class="btn" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener">Stanford profile</a>
+        </div>
       </div>
-    </div>
+      <div>
+        <img class="headshot card" src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez" />
+        <div class="logos">
+          <a href="https://healthpolicy.fsi.stanford.edu/" target="_blank" rel="noopener" aria-label="Stanford Medicine – Department of Health Policy">
+            <img src="assets/stanford_medicine.png" alt="Stanford Medicine logo" />
+          </a>
+          <a href="https://www.imperial.ac.uk/business-school/" target="_blank" rel="noopener" aria-label="Imperial College Business School">
+            <img src="assets/Newlogo.png" alt="Imperial College Business School logo" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="grid two">
+        <article class="card" style="padding:20px">
+          <h3 style="margin-top:0">Selected peer‑reviewed publications</h3>
+          <ul class="list">
+            <li class="pub">Najafi, E., Wasan, D., Baker, Y., Peters, K., Vasooja, D., Warnapala, M., <strong>Martínez‑Jiménez, M.</strong> (2025). <em>Perceptions and practices of UK general practitioners towards youth vaping</em>. <strong>BJGP Open</strong>. <a href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener">doi:10.3399/BJGPO.2025.0080</a></li>
+            <li class="pub">Sassi, F., <strong>Martínez‑Jiménez, M.</strong> (2025). <em>UKFood Combined Dataset: Statistical Matching of LCFS with NDNS (2018–2019)</em>. <strong>UK Data Service</strong>. <a href="http://doi.org/10.5255/UKDA-SN-9369-1" target="_blank" rel="noopener">doi:10.5255/UKDA‑SN‑9369‑1</a></li>
+            <li class="pub">Sassi, F., Brinsden, H., <strong>Martínez‑Jiménez, M.</strong> (2025). <em>Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the UK</em>. <strong>BMJ Public Health</strong>. <a href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener">doi:10.1136/bmjph‑2024‑001731</a></li>
+            <li class="pub">Hollingsworth, B., Zucchelli, E., <strong>Martínez‑Jiménez, M.</strong> (2025). <em>Austerity and Waiting Times: Evidence on reproductive health care delays among young millennials</em>. <strong>Public Health</strong> 242, 111–116. <a href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener">doi:10.1016/j.puhe.2025.02.027</a></li>
+            <li class="pub">Hollingsworth, B., Zucchelli, E., <strong>Martínez‑Jiménez, M.</strong> (2024). <em>Socioeconomic Deprivation, Health and Healthcare Utilisation among Millennials</em>. <strong>Social Science & Medicine</strong> 351, 116961. <a href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener">doi:10.1016/j.socscimed.2024.116961</a></li>
+            <li class="pub">Martínez‑Jiménez, M. (2023). <em>Parental nonemployment in childhood and children's health later in life</em>. <strong>Economics & Human Biology</strong> 49, 101241. <a href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener">doi:10.1016/j.ehb.2023.101241</a></li>
+            <li class="pub">Smith, L.K., van Blankenstein, E., Fox, G., Seaton, S.E., Petrou, S., Battersby, C., <strong>Martínez‑Jiménez, M.</strong> (2023). <em>Impact of new guidance on survival for 22‑week births in England and Wales</em>. <strong>BMJ Medicine</strong>. <a href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener">doi:10.1136/bmjmed‑2023‑000579</a></li>
+            <li class="pub">Czypionka, T., Reiss, M., Hagen, T., Löblová, O., Murauskienė, L., Or, Z., Vrangbæk, K., <strong>Martínez‑Jiménez, M.</strong> (2023). <em>Coping with COVID‑19: hospital care structures and capacity</em>. <strong>Health Economics, Policy and Law</strong>. <a href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener">doi:10.1017/S1744133122000275</a></li>
+            <li class="pub">Martínez‑Jiménez, M., García‑Gómez, P., Puig‑Junoy, J. (2021). <em>Cost sharing & the use of prescription and OTC medicines in Catalonia</em>. <strong>IJERPH</strong> 18(5):2562. <a href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener">doi:10.3390/ijerph18052562</a></li>
+          </ul>
+          <p style="color:var(--muted); margin-top:12px">More papers, working papers, and media coverage on <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.imperial.ac.uk/business-school/research/people/mario-martinez-jimenez/" target="_blank" rel="noopener">Imperial profile</a>.</p>
+        </article>
+        <aside class="card" style="padding:20px">
+          <h3 style="margin-top:0">Research fields & methods</h3>
+          <div class="chips">
+            <span class="chip">Early‑life shocks</span>
+            <span class="chip">Fertility & family</span>
+            <span class="chip">Health care use</span>
+            <span class="chip">Inequality of opportunity</span>
+            <span class="chip">Event‑study / DiD</span>
+            <span class="chip">RDD‑DD</span>
+            <span class="chip">IV / CRE‑Mundlak</span>
+          </div>
+          <p class="subtitle" style="margin-top:16px">Affiliations</p>
+          <ul class="list">
+            <li>Centre for Health Economics & Policy Innovation (CHEPI), Imperial</li>
+            <li>Health Econometrics and Data Group (HEDG), University of York</li>
+            <li>Member: RES, EALE, IHEA, EEA, AES</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="vitae">
+      <h2>Vitae</h2>
+      <div class="card" style="padding:20px">
+        <p>Full CV available as a PDF:</p>
+        <p><a class="btn" href="assets/Martinez_Jimenez_Mario_vita.pdf">Download CV (PDF)</a></p>
+        <p class="subtitle">Short bio</p>
+        <p>PhD in Health Policy (Economics), Lancaster University (NIHR SPHR funded). BSc Economics (UPF), MSc Health Economics (EUR), MRes Applied Economics (UAB).</p>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="grid two">
+        <article class="card" style="padding:20px">
+          <h3 style="margin-top:0">Imperial College London — Business School</h3>
+          <ul class="list">
+            <li>Individual Research Project, <em>MSc Economics & Strategy for Business</em> — Supervisor (Summer 2025)</li>
+            <li>Summer Research Internship, <em>BSc Economics, Finance & Data Analysis</em> — Supervisor (Summer 2025)</li>
+            <li>Financing Healthcare, <em>MSc Health Policy</em> — Guest Lecturer (Spring 2025)</li>
+            <li>Economics, <em>MSc Management</em> — Module Leader (Fall 2024)</li>
+            <li>Research Methods & Practice, <em>Intercalated BSc Medicine & Joint Honours</em> — Thesis advisor (2024–2025)</li>
+            <li>Contemporary Topics in Health Policy, <em>MSc Global Health Management</em> — Guest Lecturer (Spring 2024–2025)</li>
+            <li>Economics of Health Care, <em>MSc ESB</em> — Tutorial Leader (Summer 2022–2025)</li>
+            <li>Statistics & Econometrics, <em>MSc Business Analytics</em> — Guest Lecturer (Fall 2023; Summer 2024–2025)</li>
+          </ul>
+        </article>
+        <article class="card" style="padding:20px">
+          <h3 style="margin-top:0">Lancaster University — Management School</h3>
+          <ul class="list">
+            <li>Health Economics, <em>BSc Economics</em> — Tutorial Leader (Fall 2019, 2020, 2021)</li>
+          </ul>
+          <h3>Teaching qualifications</h3>
+          <ul class="list">
+            <li>Associate Fellow of the Higher Education Academy (AFHEA), Advance HE (2022)</li>
+            <li>Introduction to Teaching at Lancaster (2020)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid two">
+        <div class="card" style="padding:20px">
+          <h3 style="margin-top:0">Imperial College London</h3>
+          <p>Imperial College Research Fellow<br>Department of Economics & Public Policy (EPP)<br>Imperial Business School<br>Office 493, City and Guilds Building<br>South Kensington Campus<br>London SW7 2AZ, United Kingdom</p>
+          <p>E: <a href="mailto:m.martinez-jimenez@imperial.ac.uk">m.martinez-jimenez@imperial.ac.uk</a><br>
+             Web: <a href="https://www.imperial.ac.uk/business-school/people/mario-martinez-jimenez/" target="_blank" rel="noopener">Imperial profile</a></p>
+        </div>
+        <div class="card" style="padding:20px">
+          <h3 style="margin-top:0">Stanford University</h3>
+          <p>Visiting Postdoctoral Scholar<br>Department of Health Policy, School of Medicine<br>615 Crothers Way, Encina Commons, MC6019<br>Stanford, CA 94305-6006</p>
+          <p>E: <a href="mailto:mmarjim3@stanford.edu">mmarjim3@stanford.edu</a><br>
+             Web: <a href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener">Stanford profile</a></p>
+          <p>Social: <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener">Twitter</a> · <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="footer">© <span id="y"></span> Mario Martínez‑Jiménez · Built for GitHub Pages</div>
+    </section>
   </main>
 
   <script>
+    // current year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // smooth scroll for same-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');

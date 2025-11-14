@@ -1,89 +1,56 @@
 <!doctype html>
-<html lang="en" data-theme="aurora">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CV — Mario Martínez‑Jiménez</title>
-  <meta name="description" content="Curriculum Vitae of Mario Martínez‑Jiménez.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV — Mario Martínez‑Jiménez</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .embed{width:100%;height:85vh;border:1px solid var(--border);border-radius:12px}
+</style>
 </head>
-<body class="page-cv" data-page="cv.html">
-  <div class="page-wrap">
-    <div class="frame">
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">Mario Martínez‑Jiménez</div>
+    <nav class="links">
+      <a href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
 
-      <aside class="sidebar" aria-label="Profile and site navigation">
-        <section class="card profile-card" aria-labelledby="profile-title">
-          <div class="badge">2025–2026 Job Market</div>
-          <div class="avatar"><img src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez"></div>
-          <div>
-            <h1 id="profile-title" class="profile-name">Mario Martínez‑Jiménez</h1>
-            <p class="profile-role">Imperial College Research Fellow</p>
-            <p class="profile-role">Visiting Postdoctoral Scholar, Stanford (2025–2026)</p>
-            <p class="profile-location">London, UK · Stanford, CA</p>
-          </div>
-          <div class="social-links" role="navigation" aria-label="External profiles">
-            <a href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener">Stanford profile</a>
-            <a href="https://profiles.imperial.ac.uk/m.martinez-jimenez" target="_blank" rel="noopener">Imperial profile</a>
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="assets/Martinez_Jimenez_Mario_vita.pdf">CV (PDF)</a>
-          </div>
-          <div class="affiliations" aria-label="Affiliations">
-            <a href="https://healthpolicy.fsi.stanford.edu/" target="_blank" rel="noopener"><img src="assets/stanford_medicine.png" alt="Stanford Health Policy"></a>
-            <a href="https://www.imperial.ac.uk/business-school/" target="_blank" rel="noopener"><img src="assets/Newlogo.png" alt="Imperial College Business School"></a>
-          </div>
-        </section>
+<main class="container">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="card profile">
+        <img class="photo" src="assets/headshot.jpg" alt="Portrait of Mario Martínez‑Jiménez">
+        <div class="inner">
+          <div class="name">Mario Martínez‑Jiménez</div>
+          <div class="role">Imperial College Research Fellow</div>
+          <div class="fields">Health • Labor • Public Economics</div>
+        </div>
+      </div>
+    </aside>
 
-        <nav class="card nav-card" aria-label="Primary">
-          <div class="site-nav">
-            <a href="index.html">Overview</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
-            <a href="cv.html">CV</a>
-          </div>
-        </nav>
+    <div class="content">
+      <section>
+        <h1>Curriculum Vitae</h1>
+        <p><a class="btn primary" href="assets/Martinez_Jimenez_Mario_vita.pdf">Download CV (PDF)</a></p>
+        <object class="embed" data="assets/Martinez_Jimenez_Mario_vita.pdf" type="application/pdf">
+          <p>Your browser can’t display the PDF. <a href="assets/Martinez_Jimenez_Mario_vita.pdf">Download the file</a>.</p>
+        </object>
+      </section>
 
-        <section class="card contact-card" aria-label="Download CV">
-          <h2>Need a PDF?</h2>
-          <p>Prefer an offline copy? Use the actions below to download or open the full curriculum vitae.</p>
-        </section>
-      </aside>
-
-      <main class="main">
-        <section class="hero">
-          <p class="intro-eyebrow">Curriculum vitae</p>
-          <h1>A concise overview of my academic journey.</h1>
-          <p class="section-subtitle">Includes appointments, publications, teaching, and service.</p>
-          <div class="cv-actions">
-            <a class="button primary" href="assets/Martinez_Jimenez_Mario_vita.pdf" download>Download CV (PDF)</a>
-            <a class="button" href="assets/Martinez_Jimenez_Mario_vita.pdf" target="_blank" rel="noopener">Open in new tab</a>
-          </div>
-        </section>
-
-        <section>
-          <h2>Preview</h2>
-          <div class="cv-frame">
-            <iframe src="assets/Martinez_Jimenez_Mario_vita.pdf#view=FitH" title="Curriculum Vitae preview"></iframe>
-          </div>
-        </section>
-      </main>
-
+      <section>
+        <div class="footer">© <span id="y"></span> Mario Martínez‑Jiménez · Built for GitHub Pages</div>
+      </section>
     </div>
   </div>
-
-  <footer class="footer">© <span id="year"></span> Mario Martínez‑Jiménez · Built for GitHub Pages</footer>
-
-  <script>
-    const page = document.body.dataset.page || 'index.html';
-    document.querySelectorAll('.site-nav a').forEach(link => {
-      if (link.getAttribute('href') === page) {
-        link.classList.add('is-active');
-      }
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</main>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>

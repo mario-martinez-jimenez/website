@@ -314,10 +314,23 @@ a:hover {
 }
 
 .social-icon-image {
-  width: 1.12rem;
-  height: 1.12rem;
+  width: 2.05rem;
+  height: 2.05rem;
   display: block;
   object-fit: contain;
+}
+
+.social-footer a.social-link-scholar {
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.social-footer a.social-link-scholar:hover {
+  border: 0;
+  opacity: 0.9;
 }
 
 .site-footer {

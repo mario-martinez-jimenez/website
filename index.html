@@ -8,6 +8,21 @@
       name="description"
       content="Mario Martinez-Jimenez personal academic website."
     />
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem("site-theme-mode") || "auto";
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          if (mode === "light" || mode === "dark") {
+            document.documentElement.setAttribute("data-theme", mode);
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme-mode", "auto");
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,13 +46,25 @@
     <header class="site-header">
       <nav class="container navbar" aria-label="Main">
         <a class="brand" href="#about">Mario Martinez-Jimenez</a>
-        <div class="nav-links">
-          <a href="#about">about</a>
-          <a href="#job-market">job market paper</a>
-          <a href="#working-papers">working papers</a>
-          <a href="#publications">publications</a>
-          <a href="#work-progress">work in progress</a>
-          <a href="teaching-grants.html" target="_blank" rel="noopener noreferrer">teaching &amp; grants</a>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#about">about</a>
+            <a href="teaching.html" target="_blank" rel="noopener noreferrer">teaching</a>
+            <a href="grants.html" target="_blank" rel="noopener noreferrer">grants</a>
+          </div>
+          <button class="theme-toggle" type="button" data-mode="auto" aria-label="Theme: Auto" title="Theme: Auto">
+            <svg class="icon-auto" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3a9 9 0 1 0 0 18V3Z" fill="currentColor"></path>
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+            </svg>
+            <svg class="icon-light" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="1.7"></circle>
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            </svg>
+            <svg class="icon-dark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20.25 14.5A8.75 8.75 0 1 1 9.5 3.75a7.25 7.25 0 0 0 10.75 10.75Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -45,17 +72,20 @@
     <main class="container page-main" role="main">
       <section class="about-layout" id="about">
         <aside class="profile-pane">
-          <img
-            src="assets/headshot.jpg"
-            alt="Mario Martinez-Jimenez portrait"
-            class="profile-photo"
-          />
+          <figure class="profile-figure">
+            <img
+              src="assets/headshot.jpg"
+              alt="Mario Martinez-Jimenez portrait"
+              class="profile-photo"
+            />
+            <figcaption class="photo-credit">Photo by Vanessa Coleman.</figcaption>
+          </figure>
         </aside>
 
         <article class="about-content">
           <h1>Mario Martinez-Jimenez</h1>
           <p>
-            I am currently a Visiting Postdoctoral Scholar at Stanford Universtiy
+            I am currently a Visiting Postdoctoral Scholar at Stanford University
             (Department of Health Policy, Stanford School of Medicine), hosted by Dr.
             Maya Rossin-Slater (2025-2026). I am an Imperial College Research Fellow
             in the Department of Economics &amp; Public Policy at Imperial Business
@@ -66,6 +96,26 @@
             my
             <a href="assets/Temporary_Employment_Fertility_Infant_Health.pdf" target="_blank" rel="noopener noreferrer">Job Market Paper here</a>.
           </p>
+          <div class="institution-logos" aria-label="Institution logos">
+            <a
+              class="institution-logo stanford"
+              href="https://med.stanford.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Stanford Medicine"
+            >
+              <img src="assets/stanford_medicine.png" alt="Stanford Medicine logo" />
+            </a>
+            <a
+              class="institution-logo imperial"
+              href="https://www.imperial.ac.uk/business-school/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Imperial Business School"
+            >
+              <img src="assets/Newlogo.png" alt="Imperial Business School logo" />
+            </a>
+          </div>
 
           <p>
             Research fields: health, labor, child development, family, and inequality.
@@ -86,8 +136,8 @@
               <p class="paper-abstract">
                 We study the causal effect of temporary employment on fertility and neonatal health by exploiting exogenous variation in the availability of temporary contracts induced by the 1984 Spanish labor market reform as a quasi-natural experimental setting. This reform resulted in a significant liberalization of fixed-term contracts, leading to an increase in job insecurity and a reduction in the career prospects of low-skilled workers entering the labor market under this regime. Using administrative and survey data, we estimate a within-cohort difference-in-difference regression discontinuity design model. We find that low-skilled mothers affected by the reform have fewer children, which translates into lower completed fertility, while the timing of their first birth remains unaffected. We find modest but significant rises in preterm birth and low birth weight exclusively among mothers aged 30 and above.
               </p>
-              <p class="paper-note">🏆 Award: Winner of the International Health Economics Association (iHEA) Early Career Researcher Best Paper Award (2023).</p>
-              <p class="paper-note">🎤 Presented at: NBER Conference on Fertility and Declining Population Growth in High-Income Countries, EALE, and IHEA Congress.</p>
+              <p class="paper-note">🏆 Winner of the International Health Economics Association (iHEA) Early Career Researcher Best Paper Award (2023).</p>
+              <p class="paper-note">🎤 NBER Conference on Fertility and Declining Population Growth in High-Income Countries, EALE, and IHEA Congress.</p>
             </article>
           </section>
         </article>
@@ -143,8 +193,7 @@
             </a>
           </h4>
           <p class="paper-meta">with Bruce Hollingsworth and Eugenio Zucchelli. <em>Social Science &amp; Medicine</em> (2024), 351, 116961.</p>
-          <p class="paper-note">📰 Media coverage:
-            <a href="https://www.miragenews.com/income-region-shape-young-peoples-healthcare-use-1284992/" target="_blank" rel="noopener noreferrer">Mirage News</a>,
+          <p class="paper-note">📰 <a href="https://www.miragenews.com/income-region-shape-young-peoples-healthcare-use-1284992/" target="_blank" rel="noopener noreferrer">Mirage News</a>,
             <a href="https://healthmedicinet.com/income-and-regional-disparities-dictate-how-young-people-use-health-care-services/" target="_blank" rel="noopener noreferrer">HealthMediciNet</a>,
             <a href="https://www.imperial.ac.uk/news/255144/income-regional-disparities-dictate-young-people/" target="_blank" rel="noopener noreferrer">Imperial News</a>,
             <a href="https://cls.ucl.ac.uk/ae-waiting-times-longer-for-disadvantaged-teens-new-study-finds/" target="_blank" rel="noopener noreferrer">CLS Blog</a>,
@@ -159,8 +208,7 @@
             </a>
           </h4>
           <p class="paper-meta">Solo-authored. <em>Economics and Human Biology</em> (2023), 49, 101241.</p>
-          <p class="paper-note">📰 Media coverage:
-            <a href="https://www.imperial.ac.uk/business-school/ib-knowledge/health/how-parental-unemployment-impacts-childrens-health-the-long-run" target="_blank" rel="noopener noreferrer">IB Knowledge</a>,
+          <p class="paper-note">📰 <a href="https://www.imperial.ac.uk/business-school/ib-knowledge/health/how-parental-unemployment-impacts-childrens-health-the-long-run" target="_blank" rel="noopener noreferrer">IB Knowledge</a>,
             <a href="https://sphr.nihr.ac.uk/news-and-events/blog/how-living-in-a-workless-household-affect-childrens-long-term-health/" target="_blank" rel="noopener noreferrer">NIHR SPHR Blog</a>.
           </p>
         </article>
@@ -201,8 +249,7 @@
             </a>
           </h4>
           <p class="paper-meta">with Franco Sassi and Hannah Brinsden. <em>BMJ Public Health</em> (2025), 3(1).</p>
-          <p class="paper-note">📰 Media coverage:
-            <a href="https://www.news-medical.net/news/20250423/UK-public-backs-food-tax-if-it-makes-healthy-food-more-affordable.aspx" target="_blank" rel="noopener noreferrer">News Medical</a>,
+          <p class="paper-note">📰 <a href="https://www.news-medical.net/news/20250423/UK-public-backs-food-tax-if-it-makes-healthy-food-more-affordable.aspx" target="_blank" rel="noopener noreferrer">News Medical</a>,
             <a href="https://www.miragenews.com/more-people-in-favour-of-higher-tax-on-1342541/" target="_blank" rel="noopener noreferrer">Mirage News</a>,
             <a href="https://www.myscience.org/en/news/wire/more_people_in_favour_of_higher_tax_on_unhealthy_foods-2024-imperial" target="_blank" rel="noopener noreferrer">myScience</a>,
             <a href="https://medicalxpress.com/news/2024-10-people-favor-higher-tax-unhealthy.html" target="_blank" rel="noopener noreferrer">MedicalXpress</a>,
@@ -235,8 +282,7 @@
             </a>
           </h4>
           <p class="paper-meta">with L. K. Smith, E. van Blankenstein, G. Fox, S. Seaton, S. Petrou, and C. Battersby. <em>BMJ Medicine</em> (2023), 2(1).</p>
-          <p class="paper-note">📰 Media coverage:
-            <a href="https://www.theguardian.com/society/2024/nov/19/look-theyre-getting-skin-the-moral-challenge-of-saving-the-worlds-tiniest-babies" target="_blank" rel="noopener noreferrer">The Guardian</a>,
+          <p class="paper-note">📰 <a href="https://www.theguardian.com/society/2024/nov/19/look-theyre-getting-skin-the-moral-challenge-of-saving-the-worlds-tiniest-babies" target="_blank" rel="noopener noreferrer">The Guardian</a>,
             <a href="https://www.thetimes.co.uk/article/premature-babies-born-at-22-weeks-survive-in-greater-numbers-9jpnpdp38" target="_blank" rel="noopener noreferrer">The Times</a>,
             <a href="https://medicalxpress.com/news/2023-11-three-fold-babies-born-weeks-respiratory.html" target="_blank" rel="noopener noreferrer">MedicalXpress</a>,
             <a href="https://inews.co.uk/news/premature-babies-born-22-weeks-survival-rates-treble-guidelines-2736586" target="_blank" rel="noopener noreferrer">iNews</a>,
@@ -251,8 +297,7 @@
             </a>
           </h4>
           <p class="paper-meta">with M. Cacace, J. Bocken, K. Edquist, T. Klenk, U. Preusker, K. Vrangbaek, and R. Waitzberg. <em>Health Economics, Policy and Law</em> (2023), 186-203.</p>
-          <p class="paper-note">📰 Media coverage:
-            <a href="https://www.cambridge.org/core/journals/health-economics-policy-and-law/article/coping-with-covid19-the-role-of-hospital-care-structures-and-capacity-expansion-in-five-countries/798A5786E8FBA7701D389D4ED093B4DB" target="_blank" rel="noopener noreferrer">Cambridge Core</a>.
+          <p class="paper-note">📰 <a href="https://www.cambridge.org/core/journals/health-economics-policy-and-law/article/coping-with-covid19-the-role-of-hospital-care-structures-and-capacity-expansion-in-five-countries/798A5786E8FBA7701D389D4ED093B4DB" target="_blank" rel="noopener noreferrer">Cambridge Core</a>.
           </p>
         </article>
       </section>
@@ -291,5 +336,6 @@
     <footer class="site-footer">
       <div class="container">&copy; 2026 Mario Martinez-Jimenez</div>
     </footer>
+    <script src="assets/theme-toggle.js" defer></script>
   </body>
 </html>

@@ -227,7 +227,7 @@ a:hover {
 .about-content h1 {
   margin: 0 0 0.8rem;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(1.9rem, 2.8vw, 2.35rem);
+  font-size: clamp(1.65rem, 2.35vw, 2rem);
   font-weight: 300;
   line-height: 1.1;
 }
@@ -244,16 +244,16 @@ a:hover {
 .paper-section h2 {
   margin: 0 0 0.9rem;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(2rem, 3.6vw, 2.7rem);
-  font-weight: 400;
+  font-size: clamp(1.55rem, 2.05vw, 1.9rem);
+  font-weight: 300;
   line-height: 1.08;
 }
 
 .group-title {
   margin-top: 1.35rem;
   margin-bottom: 0.65rem;
-  font-size: 1.28rem;
-  font-weight: 500;
+  font-size: 1.08rem;
+  font-weight: 400;
   color: var(--global-text-color);
 }
 
@@ -272,12 +272,12 @@ a:hover {
 .paper-card h3,
 .paper-card h4 {
   margin: 0 0 0.28rem;
-  font-size: 1.06rem;
-  font-weight: 500;
+  font-size: 0.98rem;
+  font-weight: 400;
 }
 
 .paper-card h4 {
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .paper-meta {
@@ -357,8 +357,8 @@ a:hover {
 .info-main h1 {
   margin: 0 0 1rem;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-size: clamp(1.55rem, 2.2vw, 1.95rem);
+  font-weight: 300;
 }
 
 .info-block {
@@ -372,14 +372,14 @@ a:hover {
 .info-block h2 {
   margin: 0 0 0.7rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 1.35rem;
+  font-weight: 300;
 }
 
 .info-block h3 {
   margin: 0.7rem 0 0.45rem;
-  font-size: 1.03rem;
-  font-weight: 500;
+  font-size: 0.98rem;
+  font-weight: 400;
   color: var(--global-icon-color);
 }
 

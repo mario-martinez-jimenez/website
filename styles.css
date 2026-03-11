@@ -385,6 +385,14 @@ a:hover {
   color: var(--global-icon-color);
 }
 
+.info-block h3.inst-imperial {
+  color: #10306e;
+}
+
+.info-block h3.inst-lancaster {
+  color: #7b1e1e;
+}
+
 .info-list {
   margin: 0;
   padding-left: 1.1rem;

@@ -227,9 +227,10 @@ a:hover {
 .about-content h1 {
   margin: 0 0 0.8rem;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(1.65rem, 2.35vw, 2rem);
-  font-weight: 300;
-  line-height: 1.1;
+  font-size: clamp(2.4rem, 4.4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.06;
+  color: var(--global-text-color);
 }
 
 .about-content p {

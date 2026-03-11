@@ -112,12 +112,23 @@ a:hover {
   text-decoration: none;
 }
 
-.brand-emojis {
-  display: inline-block;
-  margin-left: 0.34rem;
-  letter-spacing: 0.08rem;
-  font-size: 0.88rem;
-  vertical-align: middle;
+.brand-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+}
+
+.brand-logo-stanford {
+  height: 1rem;
+}
+
+.brand-logo-imperial {
+  height: 0.9rem;
 }
 
 .nav-right {

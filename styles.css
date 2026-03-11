@@ -1,0 +1,275 @@
+:root {
+  --bg: #ffffff;
+  --text: #1b1f24;
+  --muted: #5f6d7a;
+  --theme: #476581;
+  --theme-strong: #304a63;
+  --border: #dde5ee;
+  --card: #f7fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.brand {
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--theme);
+}
+
+main {
+  padding-top: 2.2rem;
+  padding-bottom: 3rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  align-self: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid #cfd9e3;
+}
+
+.profile-links {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.profile-links a {
+  text-decoration: none;
+  color: var(--theme);
+  font-size: 0.92rem;
+}
+
+.about-content h1 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  font-family: "Roboto Slab", serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+}
+
+.about-content p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.section-block {
+  margin-top: 2.3rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem 1.3rem;
+}
+
+.section-block h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+  color: var(--theme-strong);
+}
+
+.section-block h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.1rem;
+}
+
+.paper-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.paper-list li {
+  margin-bottom: 0.75rem;
+}
+
+.paper-list a,
+.paper-title {
+  font-weight: 500;
+  color: var(--theme-strong);
+  text-decoration: none;
+}
+
+.paper-list a:hover {
+  text-decoration: underline;
+}
+
+.paper-list span {
+  display: block;
+  color: var(--muted);
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.62rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--theme);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e8eef5;
+  color: #1f2c38;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.teaching-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.teaching-list li {
+  margin-bottom: 0.45rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.02rem;
+}
+
+.contact-card p {
+  margin: 0.25rem 0;
+}
+
+.contact-card a {
+  color: var(--theme-strong);
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--theme-strong);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  background: #fff;
+}
+
+.site-footer p {
+  margin: 0;
+  padding: 1rem 0 1.2rem;
+}
+
+@media (max-width: 920px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    max-width: 280px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

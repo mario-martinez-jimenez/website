@@ -6,241 +6,290 @@
     <title>Mario Martinez-Jimenez</title>
     <meta
       name="description"
-      content="Personal academic website of Mario Martinez-Jimenez."
+      content="Mario Martinez-Jimenez personal academic website."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="container nav-shell">
+      <nav class="container navbar" aria-label="Main">
         <a class="brand" href="#about">Mario Martinez-Jimenez</a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#papers">Papers</a>
-          <a href="#cv">CV</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+        <div class="nav-links">
+          <a href="#about">about</a>
+          <a href="#job-market">job market paper</a>
+          <a href="#working-papers">working papers</a>
+          <a href="#publications">publications</a>
+          <a href="#work-progress">work in progress</a>
+          <a href="teaching-grants.html" target="_blank" rel="noopener noreferrer">teaching &amp; grants</a>
+        </div>
+      </nav>
     </header>
 
-    <main class="container">
-      <section id="about" class="about-layout">
-        <aside class="profile-card">
+    <main class="container page-main" role="main">
+      <section class="about-layout" id="about">
+        <aside class="profile-pane">
           <img
-            src="assets/profile.jpg"
-            alt="Portrait of Mario Martinez-Jimenez"
-            class="profile-image"
+            src="assets/headshot.jpg"
+            alt="Mario Martinez-Jimenez portrait"
+            class="profile-photo"
           />
-          <div class="profile-links">
-            <a href="https://www.imperial.ac.uk/people/m.martinez-jimenez" target="_blank" rel="noopener noreferrer">Imperial profile</a>
-            <a href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener noreferrer">Stanford profile</a>
-            <a href="https://scholar.google.com/citations?user=Zw69_1cAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          </div>
         </aside>
 
         <article class="about-content">
           <h1>Mario Martinez-Jimenez</h1>
           <p>
-            I am currently a <strong>Visiting Postdoctoral Scholar</strong> at
-            Stanford University (Department of Health Policy, Stanford School of
-            Medicine), hosted by Dr. Maya Rossin-Slater (2025-2026). I am an
-            <strong>Imperial College Research Fellow</strong> in the Department
-            of Economics and Public Policy at Imperial Business School,
-            sponsored by Professor Dame Carol Propper.
+            I am currently a Visiting Postdoctoral Scholar at Stanford Universtiy
+            (Department of Health Policy, Stanford School of Medicine), hosted by Dr.
+            Maya Rossin-Slater (2025-2026). I am an Imperial College Research Fellow
+            in the Department of Economics &amp; Public Policy at Imperial Business
+            School, sponsored by Professor Dame Carol Propper. You can download my
+            <a href="assets/Martinez_Jimenez_Mario_CV.pdf" target="_blank" rel="noopener noreferrer">CV here</a>,
+            reach me at
+            <a href="mailto:mmarjim3@stanford.edu">mmarjim3@stanford.edu</a>, and read
+            my
+            <a href="assets/Temporary_Employment_Fertility_Infant_Health.pdf" target="_blank" rel="noopener noreferrer">Job Market Paper here</a>.
           </p>
+
           <p>
-            My research focuses on the intersection of health, labor, and public
-            economics, particularly issues related to child development,
-            healthcare inequality, and family. My projects examine (i) the
-            long-term effects of early-life shocks, (ii) environmental risks
-            affecting young people's mental health and well-being, (iii)
-            socioeconomic inequality in health and access to healthcare, and
-            (iv) factors underlying declining fertility rates.
+            Research fields: health, labor, child development, family, and inequality.
           </p>
-          <p>
-            Before joining Imperial, I gained my PhD in Health Policy
-            (Economics) from Lancaster University, funded by the NIHR School for
-            Public Health Research. I have a BSc in Economics from Pompeu Fabra
-            University (UPF), an MSc in Health Economics from Erasmus University
-            Rotterdam (EUR), and an MRes in Applied Economics from the
-            Autonomous University of Barcelona (UAB).
+
+          <section id="job-market" class="paper-section">
+            <h2>Job Market Paper</h2>
+            <article class="paper-card">
+              <h3>
+                <a href="assets/Temporary_Employment_Fertility_Infant_Health.pdf" target="_blank" rel="noopener noreferrer">
+                  When Careers Stall: The Effects of Temporary Employment on Fertility and Neonatal Health
+                </a>
+              </h3>
+              <p class="paper-meta">
+                with
+                <a href="https://www.juditvall.com/" target="_blank" rel="noopener noreferrer">Judit Vall Castello</a>
+              </p>
+              <p class="paper-abstract">
+                We study the causal effect of temporary employment on fertility and neonatal health by exploiting exogenous variation in the availability of temporary contracts induced by the 1984 Spanish labor market reform as a quasi-natural experimental setting. This reform resulted in a significant liberalization of fixed-term contracts, leading to an increase in job insecurity and a reduction in the career prospects of low-skilled workers entering the labor market under this regime. Using administrative and survey data, we estimate a within-cohort difference-in-difference regression discontinuity design model. We find that low-skilled mothers affected by the reform have fewer children, which translates into lower completed fertility, while the timing of their first birth remains unaffected. We find modest but significant rises in preterm birth and low birth weight exclusively among mothers aged 30 and above.
+              </p>
+              <p class="paper-note">🏆 Award: Winner of the International Health Economics Association (iHEA) Early Career Researcher Best Paper Award (2023).</p>
+              <p class="paper-note">🎤 Presented at: NBER Conference on Fertility and Declining Population Growth in High-Income Countries, EALE, and IHEA Congress.</p>
+            </article>
+          </section>
+        </article>
+      </section>
+
+      <section id="working-papers" class="paper-section">
+        <h2>Working Papers</h2>
+
+        <article class="paper-card">
+          <h3>
+            <a href="https://github.com/mario-martinez-jimenez/Working-Papers/blob/7d6d98660c7103ff3d7e8a8482ef43aa88e3b4a0/How_do_economic_shocks_impact_upon_the_mental_health_of_retirees.pdf" target="_blank" rel="noopener noreferrer">
+              How do economic shocks impact upon the effect of retirement on mental health?
+            </a>
+          </h3>
+          <p class="paper-meta">
+            with
+            <a href="https://www.lancaster.ac.uk/dsi/about-us/members/bruce-hollingsworth" target="_blank" rel="noopener noreferrer">Bruce Hollingsworth</a>
+            and
+            <a href="https://sites.google.com/site/ezucchelli1/home" target="_blank" rel="noopener noreferrer">Eugenio Zucchelli</a>
+            (Submitted)
           </p>
-          <p>
-            I am affiliated with the Centre for Health Economics and Policy
-            Innovation (CHEPI) and with the Health Econometrics and Data Group
-            (HEDG - University of York).
+          <p class="paper-abstract">
+            We explore the effects of retirement on both physical and mental ill-health and whether these change in the presence of economic shocks. Using ELSA data and a difference-in-differences strategy with matching, we find heterogeneous effects by gender and occupation, and evidence that recession timing matters for retirement-related health outcomes.
+          </p>
+        </article>
+
+        <article class="paper-card">
+          <h3>
+            <a href="assets/Early_Life_Conditions_Adaptive_Behaviour_Development.pdf" target="_blank" rel="noopener noreferrer">
+              The Role of Early Life Conditions on the Development of Child's Adaptive Behaviour Skills
+            </a>
+          </h3>
+          <p class="paper-meta">
+            with
+            <a href="https://sites.google.com/site/silviaedithaguirrerodriguez/about" target="_blank" rel="noopener noreferrer">Edith Aguirre</a>
+            (Submitted)
+          </p>
+          <p class="paper-abstract">
+            This paper examines how perinatal and neonatal conditions shape communicative, physical, and socio-emotional development by age three in the United Kingdom. Using PEACH data and multiple identification strategies, we find that poorer perinatal health is associated with slower physical development, while breastfeeding is linked to improved communication and socio-emotional outcomes.
           </p>
         </article>
       </section>
 
-      <section id="papers" class="section-block">
-        <h2>Papers</h2>
-        <h3>Peer-Reviewed Publications</h3>
-        <ol class="paper-list">
-          <li>
+      <section id="publications" class="paper-section">
+        <h2>Publications</h2>
+
+        <h3 class="group-title">Economics</h3>
+
+        <article class="paper-card">
+          <h4>
             <a href="https://doi.org/10.1016/j.socscimed.2024.116961" target="_blank" rel="noopener noreferrer">
-              Socioeconomic Deprivation, Health and Healthcare Utilisation among Millennials
+              Socioeconomic Deprivation, Health and Healthcare Utilisation Among Millennials
             </a>
-            <span>with Bruce Hollingsworth and Eugenio Zucchelli. Social Science &amp; Medicine (2024), 351, 116961.</span>
-          </li>
-          <li>
+          </h4>
+          <p class="paper-meta">with Bruce Hollingsworth and Eugenio Zucchelli. <em>Social Science &amp; Medicine</em> (2024), 351, 116961.</p>
+          <p class="paper-note">📰 Media coverage:
+            <a href="https://www.miragenews.com/income-region-shape-young-peoples-healthcare-use-1284992/" target="_blank" rel="noopener noreferrer">Mirage News</a>,
+            <a href="https://healthmedicinet.com/income-and-regional-disparities-dictate-how-young-people-use-health-care-services/" target="_blank" rel="noopener noreferrer">HealthMediciNet</a>,
+            <a href="https://www.imperial.ac.uk/news/255144/income-regional-disparities-dictate-young-people/" target="_blank" rel="noopener noreferrer">Imperial News</a>,
+            <a href="https://cls.ucl.ac.uk/ae-waiting-times-longer-for-disadvantaged-teens-new-study-finds/" target="_blank" rel="noopener noreferrer">CLS Blog</a>,
+            <a href="https://www.imperial.ac.uk/business-school/ib-knowledge/health/teenagers-and-healthcare-inequality-lessons-policymakers/" target="_blank" rel="noopener noreferrer">IB Knowledge</a>.
+          </p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
             <a href="https://doi.org/10.1016/j.ehb.2023.101241" target="_blank" rel="noopener noreferrer">
               Parental nonemployment in childhood and children's health later in life
             </a>
-            <span>solo-authored. Economics and Human Biology (2023), 49, 1-23.</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.3399/BJGPO.2025.0207" target="_blank" rel="noopener noreferrer">
-              GP's perspective on assessing adolescent vaping among individuals without prior smoking history
-            </a>
-            <span>with E. Najafi, D. Wasan, Y. Baker, K. Peters, D. Vasooja, and M. Warnapala. BJGP Open (2025).</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener noreferrer">
-              Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the United Kingdom
-            </a>
-            <span>with Franco Sassi and Hannah Brinsden. BMJ Public Health (2025).</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener noreferrer">
-              Perceptions and practices of UK general practitioners towards youth vaping: a questionnaire-based study
-            </a>
-            <span>with E. Najafi, D. Wasan, Y. Baker, K. Peters, D. Vasooja, and M. Warnapala. BJGP Open (2025).</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener noreferrer">
-              Austerity and Waiting Times: Evidence on reproductive health care delays among young millennials in deprived areas
-            </a>
-            <span>with Bruce Hollingsworth and Eugenio Zucchelli. Public Health (2025), 242, 111-116.</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener noreferrer">
-              Impact of new guidance on survival for 22-week births in England and Wales: A population-based cohort
-            </a>
-            <span>with Lucy Smith, Emily van Blankenstein, Grenville Fox, Sarah Seaton, Stavros Petrou, and Cheryl Battersby. BMJ Medicine (2023).</span>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener noreferrer">
-              Coping with COVID-19: The role of hospital care structures and capacity expansion in five countries
-            </a>
-            <span>with T. Czypionka, M. Reiss, T. Hagen, O. Loblova, L. Murauskiene, Z. Or, and K. Vrangbaek. Health Economics, Policy and Law (2023), 1-18.</span>
-          </li>
-          <li>
+          </h4>
+          <p class="paper-meta">Solo-authored. <em>Economics and Human Biology</em> (2023), 49, 101241.</p>
+          <p class="paper-note">📰 Media coverage:
+            <a href="https://www.imperial.ac.uk/business-school/ib-knowledge/health/how-parental-unemployment-impacts-childrens-health-the-long-run" target="_blank" rel="noopener noreferrer">IB Knowledge</a>,
+            <a href="https://sphr.nihr.ac.uk/news-and-events/blog/how-living-in-a-workless-household-affect-childrens-long-term-health/" target="_blank" rel="noopener noreferrer">NIHR SPHR Blog</a>.
+          </p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
             <a href="https://doi.org/10.3390/ijerph18052562" target="_blank" rel="noopener noreferrer">
               The effect of changes in cost sharing on the consumption of prescription and over-the-counter medicines in Catalonia
             </a>
-            <span>with Pilar Garcia-Gomez and Jaume Puig-Junoy. International Journal of Environmental Research and Public Health (2021), 18(5):2562.</span>
-          </li>
-          <li>
+          </h4>
+          <p class="paper-meta">with Pilar Garcia-Gomez and Jaume Puig-Junoy. <em>International Journal of Environmental Research and Public Health</em> (2021), 18(5), 2562.</p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
             <a href="https://doi.org/10.1007/s10754-020-09281-3" target="_blank" rel="noopener noreferrer">
               Effects of macroeconomic fluctuations on mental health and psychotropic medicine consumption
             </a>
-            <span>with Judit Vall-Castello. International Journal of Health Economics and Management (2020), 20, 277-297.</span>
-          </li>
-          <li>
-            <a href="http://doi.org/10.5255/UKDA-SN-9369-1" target="_blank" rel="noopener noreferrer">
-              UKFood Combined Dataset: Statistical Matching of the Living Costs and Food Survey with the National Diet and Nutrition Survey, 2018-2019
-            </a>
-            <span>Data collection with Franco Sassi. Office for National Statistics (2025).</span>
-          </li>
-        </ol>
+          </h4>
+          <p class="paper-meta">with Judit Vall Castello. <em>International Journal of Health Economics and Management</em> (2020), 20, 277-297.</p>
+        </article>
 
-        <h3>Working Papers</h3>
-        <ol class="paper-list">
-          <li>
-            <a href="assets/Temporary_Employment_Fertility_Infant_Health.pdf" target="_blank" rel="noopener noreferrer">
-              Temporary Employment, Fertility and Health at Birth
-            </a>
-            <span>with Judit Vall Castello. Winner of the International Health Economics Association (IHEA) 2023 Best Paper by Early Career Researcher.</span>
-          </li>
-          <li>
-            <a href="https://github.com/mario-martinez-jimenez/Working-Papers/blob/7d6d98660c7103ff3d7e8a8482ef43aa88e3b4a0/How_do_economic_shocks_impact_upon_the_mental_health_of_retirees.pdf" target="_blank" rel="noopener noreferrer">
-              How Do Economic Shocks Impact upon the effects of Retirement on Mental Health?
-            </a>
-            <span>with Bruce Hollingsworth and Eugenio Zucchelli. Under review.</span>
-          </li>
-          <li>
-            <a href="assets/Early_Life_Conditions_Adaptive_Behaviour_Development.pdf" target="_blank" rel="noopener noreferrer">
-              The Role of Early Life Conditions on Children's Adaptive Behavior Development
-            </a>
-            <span>with Edith Aguirre. Under review.</span>
-          </li>
-        </ol>
+        <h3 class="group-title">Health Policy / Health Services Research</h3>
 
-        <h3>Work in Progress</h3>
-        <ol class="paper-list">
-          <li>
-            <span class="paper-title">The Long-Run Educational Shadow of Neonatal Care Admission</span>
-            <span>with Orla Doyle.</span>
-          </li>
-        </ol>
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.3399/BJGPO.2025.0207" target="_blank" rel="noopener noreferrer">
+              GPs' perspectives on assessing adolescent vaping among individuals without prior smoking history: a qualitative study within primary care
+            </a>
+          </h4>
+          <p class="paper-meta">with D. Vasooja, K. Peters, D. Wasan, M. Warnapala, E. Najafi, and Y. Baker. <em>BJGP Open</em> (2025).</p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.1136/bmjph-2024-001731" target="_blank" rel="noopener noreferrer">
+              Are Food Taxes for Healthy Eating Acceptable? A Survey of Public Attitudes in the United Kingdom
+            </a>
+          </h4>
+          <p class="paper-meta">with Franco Sassi and Hannah Brinsden. <em>BMJ Public Health</em> (2025), 3(1).</p>
+          <p class="paper-note">📰 Media coverage:
+            <a href="https://www.news-medical.net/news/20250423/UK-public-backs-food-tax-if-it-makes-healthy-food-more-affordable.aspx" target="_blank" rel="noopener noreferrer">News Medical</a>,
+            <a href="https://www.miragenews.com/more-people-in-favour-of-higher-tax-on-1342541/" target="_blank" rel="noopener noreferrer">Mirage News</a>,
+            <a href="https://www.myscience.org/en/news/wire/more_people_in_favour_of_higher_tax_on_unhealthy_foods-2024-imperial" target="_blank" rel="noopener noreferrer">myScience</a>,
+            <a href="https://medicalxpress.com/news/2024-10-people-favor-higher-tax-unhealthy.html" target="_blank" rel="noopener noreferrer">MedicalXpress</a>,
+            <a href="https://www.imperial.ac.uk/news/257373/more-people-favour-higher-unhealthy-foods/" target="_blank" rel="noopener noreferrer">Imperial News</a>.
+          </p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.3399/BJGPO.2025.0080" target="_blank" rel="noopener noreferrer">
+              Perceptions and practices of UK general practitioners towards youth vaping: a questionnaire-based study
+            </a>
+          </h4>
+          <p class="paper-meta">with E. Najafi, D. Wasan, Y. Baker, K. Peters, D. Vasooja, and M. Warnapala. <em>BJGP Open</em> (2025).</p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.1016/j.puhe.2025.02.027" target="_blank" rel="noopener noreferrer">
+              Austerity and Waiting Times: Evidence on Reproductive Health Care Delays among Young Millennials in Deprived Areas
+            </a>
+          </h4>
+          <p class="paper-meta">with Bruce Hollingsworth and Eugenio Zucchelli. <em>Public Health</em> (2025), 242, 111-116.</p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.1136/bmjmed-2023-000579" target="_blank" rel="noopener noreferrer">
+              Effect of national guidance on survival for babies born at 22 weeks' gestation in England and Wales: population based cohort study
+            </a>
+          </h4>
+          <p class="paper-meta">with L. K. Smith, E. van Blankenstein, G. Fox, S. Seaton, S. Petrou, and C. Battersby. <em>BMJ Medicine</em> (2023), 2(1).</p>
+          <p class="paper-note">📰 Media coverage:
+            <a href="https://www.theguardian.com/society/2024/nov/19/look-theyre-getting-skin-the-moral-challenge-of-saving-the-worlds-tiniest-babies" target="_blank" rel="noopener noreferrer">The Guardian</a>,
+            <a href="https://www.thetimes.co.uk/article/premature-babies-born-at-22-weeks-survive-in-greater-numbers-9jpnpdp38" target="_blank" rel="noopener noreferrer">The Times</a>,
+            <a href="https://medicalxpress.com/news/2023-11-three-fold-babies-born-weeks-respiratory.html" target="_blank" rel="noopener noreferrer">MedicalXpress</a>,
+            <a href="https://inews.co.uk/news/premature-babies-born-22-weeks-survival-rates-treble-guidelines-2736586" target="_blank" rel="noopener noreferrer">iNews</a>,
+            <a href="https://www.imperial.ac.uk/news/249374/number-extremely-premature-babies-receiving-neonatal/" target="_blank" rel="noopener noreferrer">Imperial News</a>.
+          </p>
+        </article>
+
+        <article class="paper-card">
+          <h4>
+            <a href="https://doi.org/10.1017/S1744133122000275" target="_blank" rel="noopener noreferrer">
+              Coping with COVID-19: the role of hospital care structures and capacity expansion in five countries
+            </a>
+          </h4>
+          <p class="paper-meta">with M. Cacace, J. Bocken, K. Edquist, T. Klenk, U. Preusker, K. Vrangbaek, and R. Waitzberg. <em>Health Economics, Policy and Law</em> (2023), 186-203.</p>
+          <p class="paper-note">📰 Media coverage:
+            <a href="https://www.cambridge.org/core/journals/health-economics-policy-and-law/article/coping-with-covid19-the-role-of-hospital-care-structures-and-capacity-expansion-in-five-countries/798A5786E8FBA7701D389D4ED093B4DB" target="_blank" rel="noopener noreferrer">Cambridge Core</a>.
+          </p>
+        </article>
       </section>
 
-      <section id="cv" class="section-block">
-        <h2>CV</h2>
-        <p>
-          Download my current CV directly here.
-        </p>
-        <div class="cta-row">
-          <a class="btn-primary" href="assets/Mario_Martinez_Jimenez_CV.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
-          <a class="btn-secondary" href="assets/Mario_Martinez_Jimenez_CV.pdf" download>Download CV</a>
-        </div>
+      <section id="work-progress" class="paper-section">
+        <h2>Work in Progress</h2>
+        <article class="paper-card compact">
+          <h4>Who Gets the Shot? Determinants of Childhood Vaccination among Medicaid Beneficiaries.</h4>
+          <p class="paper-meta">with <a href="https://www.gsb.stanford.edu/faculty-research/faculty/petra-persson" target="_blank" rel="noopener noreferrer">Petra Persson</a> and <a href="https://healthpolicy.fsi.stanford.edu/people/maya-rossin-slater" target="_blank" rel="noopener noreferrer">Maya Rossin-Slater</a>.</p>
+        </article>
+
+        <article class="paper-card compact">
+          <h4>The Long-Run Educational Shadow of Neonatal Intensive Care Admission at Birth.</h4>
+          <p class="paper-meta">with Orla Doyle.</p>
+        </article>
+
+        <article class="paper-card compact">
+          <h4>The Impact of Climate Change Awareness on Youth's Mental Health and Economic Behavior.</h4>
+          <p class="paper-meta">with Laure de Preux.</p>
+        </article>
+
+        <article class="paper-card compact">
+          <h4>Trends in Neonatal Intensive Care Resource Use and Cost for Extreme Preterm Infants in England, 2015-2023.</h4>
+          <p class="paper-meta">with Cheryl Battersby.</p>
+        </article>
       </section>
 
-      <section id="teaching" class="section-block">
-        <h2>Teaching</h2>
-        <ul class="teaching-list">
-          <li>Individual Research Project, MSc Economics and Strategy for Business (Supervisor) - Summer 2025</li>
-          <li>Summer Research Internship, BSc Economics, Finance and Data Analysis (Supervisor) - Summer 2025</li>
-          <li>Financing Healthcare, MSc Health Policy (Guest Lecturer) - Spring 2025</li>
-          <li>Economics, MSc Management (Module Leader) - Fall 2024</li>
-          <li>Research Methods &amp; Practice, Intercalated BSc Medicine &amp; Joint Honours (Thesis advisor) - 2024, 2025</li>
-          <li>Contemporary Topics in Health Policy, MSc Global Health Management (Guest Lecturer) - Spring 2024, 2025</li>
-          <li>Economics of Health Care, MSc Economics and Strategy for Business (Tutorial Leader) - Summer 2022-2025</li>
-          <li>Statistics &amp; Econometrics, MSc Business Analytics (Guest Lecturer) - Fall 2023, Summer 2024-2025</li>
-          <li>Health Economics, BSc Economics (Tutorial Leader) - Fall 2019, 2020, 2021</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="section-block">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Imperial College London</h3>
-            <p>Imperial College Research Fellow</p>
-            <p>Department of Economics and Public Policy, Imperial Business School</p>
-            <p>Office 493, City and Guilds Building</p>
-            <p>South Kensington Campus, London SW7 2AZ, United Kingdom</p>
-            <p>Email: <a href="mailto:m.martinez-jimenez@imperial.ac.uk">m.martinez-jimenez@imperial.ac.uk</a></p>
-          </div>
-          <div class="contact-card">
-            <h3>Stanford University</h3>
-            <p>Visiting Postdoctoral Scholar</p>
-            <p>Department of Health Policy, Stanford University</p>
-            <p>615 Crothers Way Encina Commons, MC6019</p>
-            <p>Stanford, CA 94305-6006, USA</p>
-            <p>Email: <a href="mailto:mmarjim3@stanford.edu">mmarjim3@stanford.edu</a></p>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://www.linkedin.com/in/mario-mart%C3%ADnez-jim%C3%A9nez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://healthpolicy.fsi.stanford.edu/people/mario-martinez-jimenez" target="_blank" rel="noopener noreferrer">Stanford page</a>
-        </div>
+      <section class="social-footer" id="contact-icons">
+        <a href="mailto:mmarjim3@stanford.edu" aria-label="email" title="email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://twitter.com/m_marjim" target="_blank" rel="noopener noreferrer" aria-label="twitter" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/mario-mart%C3%ADnez-jim%C3%A9nez" target="_blank" rel="noopener noreferrer" aria-label="linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=Zw69_1cAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="google scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2026 Mario Martinez-Jimenez</p>
-      </div>
+      <div class="container">&copy; 2026 Mario Martinez-Jimenez</div>
     </footer>
   </body>
 </html>

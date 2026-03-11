@@ -124,11 +124,11 @@ a:hover {
 }
 
 .brand-logo-stanford {
-  height: 0.86rem;
+  height: 1rem;
 }
 
 .brand-logo-imperial {
-  height: 0.78rem;
+  height: 0.95rem;
 }
 
 .nav-right {
@@ -222,29 +222,6 @@ a:hover {
   font-size: 1rem;
 }
 
-.institution-logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem 1.25rem;
-  margin: 0.3rem 0 1.2rem;
-}
-
-.institution-logo {
-  display: inline-flex;
-  align-items: center;
-}
-
-.institution-logo img {
-  display: block;
-  width: auto;
-  height: 42px;
-}
-
-.institution-logo.imperial img {
-  height: 35px;
-}
-
 .paper-section {
   margin-top: 2rem;
 }
@@ -328,6 +305,13 @@ a:hover {
 .social-footer a:hover {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
+}
+
+.social-icon-image {
+  width: 1.12rem;
+  height: 1.12rem;
+  display: block;
+  object-fit: contain;
 }
 
 .site-footer {

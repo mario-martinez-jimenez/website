@@ -65,7 +65,7 @@ body {
   color: var(--global-text-color);
   background: var(--global-bg-color);
   line-height: 1.55;
-  font-weight: 400;
+  font-weight: 300;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -148,12 +148,12 @@ a:hover {
 .nav-links a {
   color: var(--global-text-color);
   font-size: 0.97rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .nav-links a.active {
   color: var(--global-theme-color);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .nav-links a:hover {
@@ -237,6 +237,7 @@ a:hover {
 .about-content p {
   margin: 0 0 1rem;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 .paper-section {
@@ -255,7 +256,7 @@ a:hover {
   margin-top: 1.35rem;
   margin-bottom: 0.65rem;
   font-size: 1.08rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--global-text-color);
 }
 
@@ -275,7 +276,7 @@ a:hover {
 .paper-card h4 {
   margin: 0 0 0.28rem;
   font-size: 0.98rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .paper-card h4 {
@@ -286,16 +287,19 @@ a:hover {
   margin: 0.12rem 0 0.42rem;
   color: var(--global-text-color-light);
   font-size: 0.96rem;
+  font-weight: 300;
 }
 
 .paper-abstract {
   margin: 0.35rem 0 0.5rem;
   font-size: 0.96rem;
+  font-weight: 300;
 }
 
 .paper-note {
   margin: 0.3rem 0 0;
   font-size: 0.95rem;
+  font-weight: 300;
 }
 
 .social-footer {
@@ -381,7 +385,7 @@ a:hover {
 .info-block h3 {
   margin: 0.7rem 0 0.45rem;
   font-size: 0.98rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--global-icon-color);
 }
 
@@ -400,6 +404,7 @@ a:hover {
 
 .info-list li {
   margin-bottom: 0.42rem;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {

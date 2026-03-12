@@ -309,6 +309,10 @@ a:hover {
   font-weight: 300;
 }
 
+.paper-abstract-toggle summary::before {
+  content: "> ";
+}
+
 .paper-abstract-toggle summary::-webkit-details-marker {
   display: none;
 }

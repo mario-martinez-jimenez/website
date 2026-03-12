@@ -296,6 +296,37 @@ a:hover {
   font-weight: 300;
 }
 
+.paper-abstract-toggle {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.paper-abstract-toggle summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline;
+  color: var(--global-theme-color);
+  font-size: 0.96rem;
+  font-weight: 300;
+}
+
+.paper-abstract-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-abstract-toggle summary:hover {
+  color: var(--global-hover-color);
+  text-decoration: underline;
+}
+
+.paper-abstract-toggle[open] summary {
+  display: inline-block;
+  margin-bottom: 0.12rem;
+}
+
+.paper-abstract-toggle .paper-abstract {
+  margin: 0.15rem 0 0.5rem;
+}
+
 .paper-note {
   margin: 0.3rem 0 0;
   font-size: 0.95rem;

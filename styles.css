@@ -442,6 +442,102 @@ a:hover {
   font-weight: 300;
 }
 
+.grants-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.grants-column h2 {
+  margin-bottom: 0.85rem;
+}
+
+.grant-item {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.grant-item:last-child {
+  margin-bottom: 0;
+}
+
+.grant-title {
+  margin: 0 0 0.2rem;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.grant-meta {
+  margin: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.93rem;
+  font-weight: 300;
+  line-height: 1.42;
+}
+
+.chip {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.08rem 0.48rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+
+.chip-grant {
+  background: #e6f0ff;
+  border-color: #bad2ff;
+  color: #13489c;
+}
+
+.chip-award {
+  background: #fff4de;
+  border-color: #f4d49d;
+  color: #8d5b00;
+}
+
+.chip-travel {
+  background: #e7f8f7;
+  border-color: #a7dcd8;
+  color: #0a6660;
+}
+
+.chip-scholarship {
+  background: #e9f8eb;
+  border-color: #b4dfba;
+  color: #1f6934;
+}
+
+html[data-theme="dark"] .chip-grant {
+  background: rgba(106, 178, 255, 0.16);
+  border-color: rgba(106, 178, 255, 0.38);
+  color: #9ecbff;
+}
+
+html[data-theme="dark"] .chip-award {
+  background: rgba(230, 173, 79, 0.18);
+  border-color: rgba(230, 173, 79, 0.45);
+  color: #ffd591;
+}
+
+html[data-theme="dark"] .chip-travel {
+  background: rgba(77, 188, 178, 0.18);
+  border-color: rgba(77, 188, 178, 0.44);
+  color: #8de7df;
+}
+
+html[data-theme="dark"] .chip-scholarship {
+  background: rgba(92, 184, 107, 0.18);
+  border-color: rgba(92, 184, 107, 0.44);
+  color: #a8e5b2;
+}
+
 @media (max-width: 768px) {
   .about-layout {
     grid-template-columns: 1fr;
@@ -469,5 +565,10 @@ a:hover {
 
   .nav-links {
     justify-content: flex-start;
+  }
+
+  .grants-columns {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }

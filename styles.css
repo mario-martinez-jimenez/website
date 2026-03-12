@@ -429,10 +429,12 @@ a:hover {
 
 .info-block h3.inst-imperial {
   color: #10306e;
+  font-weight: 700;
 }
 
 .info-block h3.inst-lancaster {
   color: #7b1e1e;
+  font-weight: 700;
 }
 
 .info-list {

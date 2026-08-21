@@ -234,6 +234,12 @@ a:hover {
   color: var(--global-text-color);
 }
 
+.about-content .job-market-status {
+  margin: -0.25rem 0 1rem;
+  color: #6b7280;
+  font-weight: 700;
+}
+
 .about-content p {
   margin: 0 0 1rem;
   font-size: 1rem;

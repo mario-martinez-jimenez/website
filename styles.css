@@ -698,3 +698,27 @@ html[data-theme="dark"] .chip-scholarship {
 .paper-action-row:has(> .paper-abstract-toggle[open]) > .paper-note-toggle > .paper-note {
   order: 3;
 }
+
+.paper-action-row:has(> .paper-note-toggle[open]) > details > summary {
+  order: 2;
+}
+
+.paper-action-row:has(> .paper-note-toggle[open]) > .paper-note-toggle[open] > summary {
+  order: 0;
+}
+
+.paper-action-row:has(> .paper-note-toggle[open]) > .paper-note-toggle[open] > .paper-note {
+  flex: 1 0 100%;
+  max-width: none;
+  order: 1;
+  width: 100%;
+}
+
+.paper-note-toggle[open] {
+  width: 100%;
+}
+
+.paper-note-toggle[open] .paper-note {
+  max-width: none;
+  width: 100%;
+}

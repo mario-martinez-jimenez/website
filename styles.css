@@ -661,3 +661,22 @@ html[data-theme="dark"] .chip-scholarship {
   max-width: 72ch;
   order: 1;
 }
+
+.paper-action-row:has(> .paper-abstract-toggle[open]) > .paper-abstract-toggle > summary {
+  order: 0;
+}
+
+.paper-action-row:has(> .paper-abstract-toggle[open]) > .paper-abstract-toggle > .paper-abstract {
+  flex: 1 0 100%;
+  max-width: none;
+  order: 1;
+  width: 100%;
+}
+
+.paper-action-row:has(> .paper-abstract-toggle[open]) > .paper-note-toggle > summary {
+  order: 2;
+}
+
+.paper-action-row:has(> .paper-abstract-toggle[open]) > .paper-note-toggle > .paper-note {
+  order: 3;
+}

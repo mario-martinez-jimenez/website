@@ -346,6 +346,16 @@ a:hover {
   font-weight: 300;
 }
 
+.paper-meta a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.paper-meta a:hover {
+  color: var(--global-hover-color);
+}
+
 .social-footer {
   margin-top: 2rem;
   display: flex;

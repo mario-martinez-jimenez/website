@@ -597,7 +597,7 @@ html[data-theme="dark"] .chip-scholarship {
 .paper-note-toggle summary {
   color: var(--global-theme-color);
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 400;
   list-style: none;
 }
 
@@ -623,7 +623,7 @@ html[data-theme="dark"] .chip-scholarship {
 
 /* Refined inline paper controls */
 .paper-abstract-toggle summary::before {
-  content: none;
+  content: "> ";
 }
 
 .paper-abstract-toggle summary,

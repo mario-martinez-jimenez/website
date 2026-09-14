@@ -722,3 +722,25 @@ html[data-theme="dark"] .chip-scholarship {
   max-width: none;
   width: 100%;
 }
+
+.paper-action-row > details {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.paper-action-row > details[open] {
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+.paper-action-row > details[open] > summary {
+  display: block;
+}
+
+.paper-action-row > details[open] > .paper-abstract,
+.paper-action-row > details[open] > .paper-note {
+  display: block;
+  max-width: none;
+  width: 100%;
+}

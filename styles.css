@@ -583,3 +583,39 @@ html[data-theme="dark"] .chip-scholarship {
     gap: 1.2rem;
   }
 }
+
+
+/* Compact paper action toggles */
+.paper-abstract-toggle,
+.paper-note-toggle {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.2rem 0.9rem 0.5rem 0;
+  vertical-align: top;
+}
+
+.paper-note-toggle summary {
+  color: var(--global-theme-color);
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.paper-note-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-note-toggle summary:hover {
+  color: var(--global-hover-color);
+  text-decoration: underline;
+}
+
+.paper-note-toggle[open] summary {
+  display: inline-block;
+  margin-bottom: 0.12rem;
+}
+
+.paper-note-toggle .paper-note {
+  margin: 0.15rem 0 0.5rem;
+  max-width: 72ch;
+}

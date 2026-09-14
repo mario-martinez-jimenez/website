@@ -350,6 +350,10 @@ a:hover {
   font-size: 0.92rem;
 }
 
+#job-market .paper-meta {
+  font-size: 0.92rem;
+}
+
 .paper-meta a {
   color: inherit;
   font-size: inherit;

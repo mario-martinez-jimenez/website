@@ -597,7 +597,9 @@ html[data-theme="dark"] .chip-scholarship {
 .paper-note-toggle summary {
   color: var(--global-theme-color);
   cursor: pointer;
-  font-weight: 400 !important;
+  font-size: 0.96rem;
+  font-weight: 300 !important;
+  line-height: inherit;
   list-style: none;
 }
 

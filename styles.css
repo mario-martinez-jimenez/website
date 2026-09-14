@@ -346,6 +346,10 @@ a:hover {
   font-weight: 300;
 }
 
+.paper-meta {
+  font-size: 0.92rem;
+}
+
 .paper-meta a {
   color: inherit;
   font-size: inherit;

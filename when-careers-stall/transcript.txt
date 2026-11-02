@@ -1,0 +1,30 @@
+WHEN CAREERS STALL — RESEARCH IN THREE MINUTES
+Mario Martínez-Jiménez and Judit Vall Castelló
+Synthetic British English narration
+
+0:00 Why it matters
+Imagine planning a family when every job comes with an expiry date. Would you feel ready to have a child? Across many richer countries, people are having fewer children. This study asks whether an insecure start to working life can leave a lasting mark on family formation.
+
+0:17 The natural experiment
+Economists Mario Martinez Jimenez and Judit Vall Castello study a major Spanish labour reform in nineteen eighty-four. Employers gained much greater freedom to use temporary contracts, while existing permanent workers kept their protections. For young people entering work, the rules of the game had changed.
+
+0:36 How the study works
+Comparing temporary and permanent workers directly could be misleading. Instead, the researchers compare nearby birth cohorts reaching working age before and after the reform, across education groups with different exposure. This difference-in-differences approach asks whether outcomes changed more for the more exposed group. It relies on how the groups would have evolved without the reform.
+
+0:59 The evidence
+Employment histories reveal how early careers changed. National birth records track births and their timing. Fertility surveys add something the records cannot tell us: whether people had the number of children they wanted. Together, these sources connect working conditions to family decisions over time.
+
+1:18 The main findings
+Among the exposed cohorts of women with lower education, the study estimates fifteen point two per cent fewer births per woman, and first motherhood about five months later. Early careers became more temporary, with lower recorded income. There was no detectable reduction in days worked. The security of work matters alongside having a job.
+
+1:39 Desired and realised families
+The surveys suggest that this is partly about difficulty realising family plans. Exposed women were more likely to report fewer children than they wanted. Waiting for a more secure moment can mean postponing a birth, and some postponed births may never happen.
+
+1:55 What the model adds
+The researchers then build an economic model of work and fertility over a woman's life. Within the model, repeated employment instability and accumulated insecurity explain much of the decline. Simulations suggest that greater early-career stability could recover some forgone births. These are model-based scenarios, rather than another policy experiment.
+
+2:17 Why policy should care
+The message reaches beyond Spain. When evaluating labour-market reforms, policymakers should consider their longer-term consequences for families, alongside employment and earnings. Helping young adults find a predictable foothold in working life may also help them realise their own family plans.
+
+2:35 Read the research
+When Careers Stall: Early-Career Job Insecurity and Fertility over the Life Cycle. Research by Mario Martinez Jimenez and Judit Vall Castello. Explore the full paper and presentation below.
